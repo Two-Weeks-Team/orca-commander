@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {presentedDeckBindings} from '../src/core/deck-presented-bindings';
+const original=Object.freeze([Object.freeze({key:'synthetic-new-target',ignoreUntil:0}),null,Object.freeze({key:'synthetic-reassigned-target',ignoreUntil:100})]);
+const masked=presentedDeckBindings(original,false);
+const leaksNew=masked.some(slot=>slot?.key==='synthetic-new-target');
+const reassignedIndex=masked.findIndex(slot=>slot?.key==='synthetic-reassigned-target');
+assert.deepEqual(masked,[null,null,null]);
+assert.equal(leaksNew,false);
+assert.equal(reassignedIndex,-1);
+assert.equal(masked[2],null);
+assert.equal(original[0]?.key,'synthetic-new-target');
+assert.equal(presentedDeckBindings(original,true),original);
+assert.equal(presentedDeckBindings(original,true)[2]?.key,'synthetic-reassigned-target');
+console.log('PASS: 7 presented binding assertions (synthetic ACK gates; no storage or UI)');

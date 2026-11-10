@@ -1,0 +1,7 @@
+{
+  "ios": {
+    "NSCameraUsageDescription": "Deck uses the camera only to scan the pairing QR shown by Orca desktop. Video is not saved or sent.",
+    "NSMicrophoneUsageDescription": "Deck uses the microphone when you start voice input. Your paired Orca host transcribes audio with its selected model. You can edit the draft before sending.",
+    "NSLocalNetworkUsageDescription": "Orca Deck connects to your paired Orca desktop to read work state and send confirmed input and voice requests."
+  }
+}

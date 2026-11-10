@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "origin": "Original integer noise synthesis; no sampled third-party audio",
+  "generator": "scripts/deck-assets/build-click.py",
+  "sampleRate": 48000,
+  "channels": 1,
+  "bitsPerSample": 16,
+  "frames": 1920,
+  "durationMs": 40,
+  "bytes": 3884,
+  "sha256": "0e4e0fedd14d4a1970269463fab3b2a5822904445e6efc85135d71f65f3d19e2",
+  "nativeResources": [
+    "ios/Resources/deck_click.wav",
+    "android/src/main/res/raw/deck_click.wav"
+  ]
+}

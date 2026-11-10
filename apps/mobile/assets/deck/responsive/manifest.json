@@ -1,0 +1,1350 @@
+{
+  "format": 1,
+  "kind": "responsive-primitives",
+  "pxPerPt": 3,
+  "alphaBaked": true,
+  "approval": {
+    "compose": {
+      "file": "claudedocs/previews/2026-11-04-fold8/compose.py",
+      "sha256": "3bc91dd52264a3275757651a12e5a99ce3289b7a1a7c644996110e354aacdab4"
+    },
+    "matrix": {
+      "file": "claudedocs/previews/2026-11-04-fold8/responsive-matrix-v3.png",
+      "sha256": "0ef3dc97a4f52580e7c9d479e4c7c5bf666153ed5bfd5a2cef56633cd9e4810b"
+    }
+  },
+  "sourcePhoneManifestSha256": "d547e0fef23b1f642f6e8e272d66890b285b3b7583a90fa836c745366ec5a203",
+  "reusedPhoneSprites": {
+    "agent_amber_up": {
+      "file": "../sprites/agent_amber_up.png",
+      "sha256": "d8a2351546faa33dccfb8b8b414bd343f7a0474ce8d95daf7f3c0db5ab2d1aea",
+      "sourceSha256": "2c41dacc9463cc5d307bd9b6f18ecd5ced02c1cbfd10ffd8a40ae576e5421735"
+    },
+    "agent_amber_pressed": {
+      "file": "../sprites/agent_amber_pressed.png",
+      "sha256": "8879c87a49f9fcbb591d51223f83f7a41ab3ef149b813051cf6e7af38ec47f37",
+      "sourceSha256": "18f37950d080fbb4c8d0c2a00cc831e0048aa5df74994d430d12c23ecc1597af"
+    },
+    "agent_amber_selected": {
+      "file": "../sprites/agent_amber_selected.png",
+      "sha256": "21af93585ac704b3976c1b5250a4708b4ea7366e4b5f4616a06eff140b65a8ba",
+      "sourceSha256": "f77a3be81dfbc740fd0998b6729f0e9882e4bec13bc5a983dc87d890cd5e3386"
+    },
+    "agent_violet_up": {
+      "file": "../sprites/agent_violet_up.png",
+      "sha256": "98c060da3d26612422a0f72d73dfaa8cd31afd512bcb34ecb9390ce95cfada23",
+      "sourceSha256": "6abb415edccaa588346185435cb6dae91156b6b35aa0d2a74ead5b832f85f5e5"
+    },
+    "agent_violet_pressed": {
+      "file": "../sprites/agent_violet_pressed.png",
+      "sha256": "ba8e65194755c5af53177d41fcabcb47a2bfbe098245d3f933c346d461a7caa8",
+      "sourceSha256": "d15819bdb4c478a6fd4cf33860a8968d96f37d6d5333f05b02c1aee019e4b8b8"
+    },
+    "agent_violet_selected": {
+      "file": "../sprites/agent_violet_selected.png",
+      "sha256": "5eeff35bf6070ed4c7d991a42da854917c571e205f930b62f7ee58f195997fc8",
+      "sourceSha256": "d1d9a3015aac59b473259d193fdfb1ef265563178d223a6335df2f8e46f4faba"
+    },
+    "agent_blue_up": {
+      "file": "../sprites/agent_blue_up.png",
+      "sha256": "7c29cae627a17175ee0a76dc40b0473a15c456962303a8acefbcece5a53a80eb",
+      "sourceSha256": "cd9db3018277d9b821b63af07729464ac873fa7a122c83d1123949004fa1dd61"
+    },
+    "agent_blue_pressed": {
+      "file": "../sprites/agent_blue_pressed.png",
+      "sha256": "f2e8ebe9cd2f77ffa4a9c1564ae0be8e3549a3e930de68917c1406f9d03cbd15",
+      "sourceSha256": "89d64cef68ff8d0740ed1fb5171b0871fbaa417011103ae28dd23870d497289d"
+    },
+    "agent_blue_selected": {
+      "file": "../sprites/agent_blue_selected.png",
+      "sha256": "5513e4ca348d78154ff9f3a32213af53b4e6b621464a4089885a8ed886b54659",
+      "sourceSha256": "1ac6f24964e7884c42b4b6b46b96c72204c1a2c658f919cb79ba4af54e91539b"
+    },
+    "agent_green_up": {
+      "file": "../sprites/agent_green_up.png",
+      "sha256": "5bd5be6c8f2fab39dd39d4ed593561767d42c222d260a8f8ac879b2c6d0196e2",
+      "sourceSha256": "6815623dc4151ea6c3464dfae3a1885c8063069da55212c4e2dc9f917584e340"
+    },
+    "agent_green_pressed": {
+      "file": "../sprites/agent_green_pressed.png",
+      "sha256": "14e0eef90337912fcae2a77e3132e2441adc006047d835f171621d5751a89969",
+      "sourceSha256": "429260557a803ca70b443b33cd60a30a391d3f5863faab1a733440e6cd4de0b9"
+    },
+    "agent_green_selected": {
+      "file": "../sprites/agent_green_selected.png",
+      "sha256": "ba4009d03cf1c764948f503609a9a720a39d90bcfe91659664807c4ef171939f",
+      "sourceSha256": "7fb4c60028a15187efd0fa0e0234b03539245a3b8355b53b41148c5398de9d53"
+    },
+    "agent_red_up": {
+      "file": "../sprites/agent_red_up.png",
+      "sha256": "40e7f42f23ed4c5df23364ec8c50c00609eb3621e6a805da501a584e411be4c1",
+      "sourceSha256": "312f84cd62bcd809d1af9bcacb909ec1513a0add1a3bca1d18abcbd215e8523d"
+    },
+    "agent_red_pressed": {
+      "file": "../sprites/agent_red_pressed.png",
+      "sha256": "b44bd2b9daae088e38e645a7142e756541568a5f41aa07e2f09e09c9c8514484",
+      "sourceSha256": "5adecac847dbb1fb02934b7cfa13b653e2d7ad2b4b3ce0bae43ef37aff90b918"
+    },
+    "agent_red_selected": {
+      "file": "../sprites/agent_red_selected.png",
+      "sha256": "9dd6d648e55dc8760daa73c5e85df200a9e49628895ed6ab1bb2c24d5a4b2004",
+      "sourceSha256": "7f697c2f41bb978e7dd588dd1c79bafd895256b41728eeecc4bfff6dcf33ae1b"
+    },
+    "agent_gray_up": {
+      "file": "../sprites/agent_gray_up.png",
+      "sha256": "70551db7bcc3f19444d99b31a7c566ef929819e9624bd1eaea17856a6c74d460",
+      "sourceSha256": "11bf40c935737a268632302af5ba51c8e824da030c6173a21a84177724d7b5ad"
+    },
+    "agent_gray_pressed": {
+      "file": "../sprites/agent_gray_pressed.png",
+      "sha256": "6bd241d76c591a06b1a6953710baa3d8d6ea96fc327d99c61471804ab33f2954",
+      "sourceSha256": "d68e25a9bf7440d3c9502c10cdb0d9fb572d54a014c91f61f9ce907ee0a6538d"
+    },
+    "agent_gray_selected": {
+      "file": "../sprites/agent_gray_selected.png",
+      "sha256": "8b2f65a1863d9517167ca2861578902f972dfcc22d76a6168e1cb19531658e26",
+      "sourceSha256": "d91b250d881048daffd906c79217859246f318fe534b92aaa6796d6219cd4878"
+    },
+    "agent_off_up": {
+      "file": "../sprites/agent_off_up.png",
+      "sha256": "5640254ed0c5d38c7615566ec87832683e48356811d1fa85daba285e05c98c22",
+      "sourceSha256": "c703a157eacf0d02def46da3d3db45f326e3d98df89728eaf46f905394513650"
+    },
+    "agent_off_pressed": {
+      "file": "../sprites/agent_off_pressed.png",
+      "sha256": "28bf3b26721d34954d77919189699bc2a01353c957d725806c93c0fb07adaa73",
+      "sourceSha256": "9ab1cd9e484c8b7c49445db7efa09092acd3042b68a6aebeac5d3dca6800fc8d"
+    },
+    "agent_off_selected": {
+      "file": "../sprites/agent_off_selected.png",
+      "sha256": "8a32e5da9a7863e73b154043b18db2d4f14d0425260b71bb87d37861438d4ec7",
+      "sourceSha256": "a375af2f8205a4557785e4f4bff31231b9a4939b188f2aef9566db1d5fb2c215"
+    },
+    "cmd_up": {
+      "file": "../sprites/cmd_up.png",
+      "sha256": "9888a7d474033f6514dce25f06cff5e08a8432de8844bd05e11acdd83c74fc76",
+      "sourceSha256": "f1f1fa32eae9406ff8db1f7985a626c1adeabb5209ece1a2328162dde1459e13"
+    },
+    "cmd_pressed": {
+      "file": "../sprites/cmd_pressed.png",
+      "sha256": "f3403dcf997dd4d7b002b8014a4030f3427e3de759efb0fb506a7ba70daa93c3",
+      "sourceSha256": "6f600a8eff92baca4dc38c81bbbe5ca35cca06513ce869849ccb6a57500ac212"
+    },
+    "ptt_up": {
+      "file": "../sprites/ptt_up.png",
+      "sha256": "ea1a51a274cf99bf0602d8abf5ebd3da49e17f20cc073b79653f1d34e89a9bd0",
+      "sourceSha256": "a3cd84d4bcece7aa8434c56f547231287fabc1e29e5d1764626cb0508fc31183"
+    },
+    "ptt_pressed": {
+      "file": "../sprites/ptt_pressed.png",
+      "sha256": "6e4f6974d9cb1734a1f2d7059cd8dcb480c60fe9ddce1ccb24eaf8b361ccefea",
+      "sourceSha256": "17e90cb3031650aafc8b787ee4c27a6aeb0d1efc9e85eb623310d622d289debb"
+    },
+    "ptt_active": {
+      "file": "../sprites/ptt_active.png",
+      "sha256": "34f83890aea9d9b5034d98c2bf4c362e71913bc4b806a0595b6ac53315f9fab2",
+      "sourceSha256": "bc6292f8cd8fcd70e28865c5fe3533f7a6d7306890bbd48c6e846efdba1d0b19"
+    },
+    "stick_center": {
+      "file": "../sprites/stick_center.png",
+      "sha256": "903cdb03fd3eebcaea812eae806a87b99b0295f1787e19f03d09df30857b814c",
+      "sourceSha256": "d53187e3fd22a62f9040d2fe7bd0e3788563a1acd5032253489d2c58772021a7"
+    },
+    "stick_left": {
+      "file": "../sprites/stick_left.png",
+      "sha256": "e4ca2931d04879c59cf084b36b0d41c7b48fed717fce47d5a8e82b67d10d688e",
+      "sourceSha256": "0168e0a6128d93844c9bfc36060538175c6ecb08590e6cbdb284190d926314fd"
+    },
+    "stick_right": {
+      "file": "../sprites/stick_right.png",
+      "sha256": "9a28fade0b586201d7d79ac9d83a80e5fbe593dbac5b08b868da8dc6abf2d8f2",
+      "sourceSha256": "54a7705283d716c641ba1aeb43cf571fc22170ff006d56312be638297085976c"
+    },
+    "stick_up": {
+      "file": "../sprites/stick_up.png",
+      "sha256": "54f09c925a64ae5243668884cbfbc572309d688c70b002e66f9622f90a5244f3",
+      "sourceSha256": "ff39d0e2071674427f3e1101017bcdb73995f52523555e0448c24f4563be1f82"
+    },
+    "stick_down": {
+      "file": "../sprites/stick_down.png",
+      "sha256": "721917113fa9e268d485f7d59f2cdde71b8c84cc06d7ee3532b1d8901677d0ea",
+      "sourceSha256": "e6fcd4bbad03851350f85e562fde0ecb9fbb27d8cc3b4895515c49864e51fbe3"
+    },
+    "dial": {
+      "file": "../sprites/dial.png",
+      "sha256": "572ed4bcb8d89a8e8345167819e991b16b9e168b3e962c86118674dd6941782c",
+      "sourceSha256": "f234c4e6317aeb2bea1807b151bf3e8abb6c54efff457e2605e511c20aa74fab"
+    }
+  },
+  "primitives": {
+    "metalPlate": {
+      "referencePt": {
+        "w": 390,
+        "h": 844
+      },
+      "actualPx": {
+        "w": 1170,
+        "h": 2532
+      },
+      "contentRectPt": {
+        "x": 0,
+        "y": 0,
+        "w": 390,
+        "h": 844
+      },
+      "paddingPt": {
+        "top": 0,
+        "right": 0,
+        "bottom": 0,
+        "left": 0
+      },
+      "capInsetsPt": null,
+      "file": "metalPlate.png",
+      "sha256": "679fe28004c97839e5a6484a1364a1027c0bfea02179f8c66f50075b4bcd60f3",
+      "bytes": 1750236,
+      "alphaMode": "opaque",
+      "preserveAspect": false,
+      "plateRecipe": {
+        "kind": "approved-metal-strip-repeat",
+        "source": "metal-raw.png",
+        "sourceRectPx": {
+          "x": 0,
+          "y": 30,
+          "w": 1170,
+          "h": 100
+        },
+        "repeatStepPx": 100
+      }
+    },
+    "lcdWell": {
+      "referencePt": {
+        "w": 382,
+        "h": 156
+      },
+      "actualPx": {
+        "w": 1146,
+        "h": 468
+      },
+      "contentRectPt": {
+        "x": 8,
+        "y": 8,
+        "w": 366,
+        "h": 140
+      },
+      "paddingPt": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "capInsetsPt": {
+        "top": 17,
+        "right": 17,
+        "bottom": 17,
+        "left": 17
+      },
+      "alphaMode": "baked-shape",
+      "bakedMask": {
+        "shape": "rrect",
+        "radiusPt": 14,
+        "outsetPt": 3,
+        "supersample": 4,
+        "resample": "LANCZOS"
+      },
+      "sourceImage": {
+        "file": "docs/deck-design/renders/responsive-primitives/lcdWell-rgba.png",
+        "sha256": "26690cbc4d7aa6cfba2dc466aa7c87d05ab91ea206f649b94cef28687396324b",
+        "bytes": 366392
+      },
+      "placement": {
+        "reference": "logical-well-rect",
+        "padding": "fixed-pt",
+        "outsetPt": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        },
+        "referenceMeaning": "adaptive-outer-well; not the untouched phone nominal LCD"
+      },
+      "patches": [
+        {
+          "row": 0,
+          "col": 0,
+          "file": "lcdWell.r0c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 0,
+            "w": 75,
+            "h": 75
+          },
+          "referencePt": {
+            "w": 25.0,
+            "h": 25.0
+          },
+          "actualPx": {
+            "w": 75,
+            "h": 75
+          },
+          "sha256": "d7d9872096d31065ce591393aad373a82441c613d1e650d43ac3da415cdf8d19",
+          "bytes": 6877
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "file": "lcdWell.r0c1.png",
+          "sourceRectPx": {
+            "x": 75,
+            "y": 0,
+            "w": 996,
+            "h": 75
+          },
+          "referencePt": {
+            "w": 332.0,
+            "h": 25.0
+          },
+          "actualPx": {
+            "w": 996,
+            "h": 75
+          },
+          "sha256": "d7e7ed45e3f3acd5ea3d3ea9df0e7b91fc4c35f0cdef81d7197621b51300f6ec",
+          "bytes": 48386
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "file": "lcdWell.r0c2.png",
+          "sourceRectPx": {
+            "x": 1071,
+            "y": 0,
+            "w": 75,
+            "h": 75
+          },
+          "referencePt": {
+            "w": 25.0,
+            "h": 25.0
+          },
+          "actualPx": {
+            "w": 75,
+            "h": 75
+          },
+          "sha256": "fad783264bc227cd0497c5114285a163e8a5545d0ff6817d6c8a3f8446ab98ac",
+          "bytes": 5835
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "file": "lcdWell.r1c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 75,
+            "w": 75,
+            "h": 318
+          },
+          "referencePt": {
+            "w": 25.0,
+            "h": 106.0
+          },
+          "actualPx": {
+            "w": 75,
+            "h": 318
+          },
+          "sha256": "6c0238654f02df2df72285cbab20edf70ea070185ed2dc889500eba3b4793c8a",
+          "bytes": 20609
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "file": "lcdWell.r1c1.png",
+          "sourceRectPx": {
+            "x": 75,
+            "y": 75,
+            "w": 996,
+            "h": 318
+          },
+          "referencePt": {
+            "w": 332.0,
+            "h": 106.0
+          },
+          "actualPx": {
+            "w": 996,
+            "h": 318
+          },
+          "sha256": "a50fa08a62187543c6a3f1675f0b428c5615046a05948f1442dd8d65304e4f26",
+          "bytes": 196121
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "file": "lcdWell.r1c2.png",
+          "sourceRectPx": {
+            "x": 1071,
+            "y": 75,
+            "w": 75,
+            "h": 318
+          },
+          "referencePt": {
+            "w": 25.0,
+            "h": 106.0
+          },
+          "actualPx": {
+            "w": 75,
+            "h": 318
+          },
+          "sha256": "d484f0dc18ebea82582cde1abcf05c527c6be62e955b3afd140538229e17a1f7",
+          "bytes": 19797
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "file": "lcdWell.r2c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 393,
+            "w": 75,
+            "h": 75
+          },
+          "referencePt": {
+            "w": 25.0,
+            "h": 25.0
+          },
+          "actualPx": {
+            "w": 75,
+            "h": 75
+          },
+          "sha256": "3894091d93a228830b3e98f34719224f289bc8acd2057c838c7d4dd78a70b9c8",
+          "bytes": 7061
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "file": "lcdWell.r2c1.png",
+          "sourceRectPx": {
+            "x": 75,
+            "y": 393,
+            "w": 996,
+            "h": 75
+          },
+          "referencePt": {
+            "w": 332.0,
+            "h": 25.0
+          },
+          "actualPx": {
+            "w": 996,
+            "h": 75
+          },
+          "sha256": "626aba1379b0757b222f870666cebc92eb8243c684a84f810159d74e04ee941a",
+          "bytes": 48481
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "file": "lcdWell.r2c2.png",
+          "sourceRectPx": {
+            "x": 1071,
+            "y": 393,
+            "w": 75,
+            "h": 75
+          },
+          "referencePt": {
+            "w": 25.0,
+            "h": 25.0
+          },
+          "actualPx": {
+            "w": 75,
+            "h": 75
+          },
+          "sha256": "5f191904c1c9164eb193662865412d6bfdd8492ccc209fa864ea92879f928d12",
+          "bytes": 5865
+        }
+      ]
+    },
+    "agentWell": {
+      "referencePt": {
+        "w": 126,
+        "h": 120
+      },
+      "actualPx": {
+        "w": 378,
+        "h": 360
+      },
+      "contentRectPt": {
+        "x": 8,
+        "y": 8,
+        "w": 110,
+        "h": 104
+      },
+      "paddingPt": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "capInsetsPt": {
+        "top": 23,
+        "right": 23,
+        "bottom": 23,
+        "left": 23
+      },
+      "alphaMode": "baked-shape",
+      "bakedMask": {
+        "shape": "rrect",
+        "radiusPt": 20,
+        "outsetPt": 3,
+        "supersample": 4,
+        "resample": "LANCZOS"
+      },
+      "sourceImage": {
+        "file": "docs/deck-design/renders/responsive-primitives/agentWell-rgba.png",
+        "sha256": "a0d12a2c354a1a28dde8c8977aae0d58e63784d093404c887598c40311ee66c9",
+        "bytes": 107952
+      },
+      "placement": {
+        "reference": "logical-well-rect",
+        "padding": "fixed-pt"
+      },
+      "patches": [
+        {
+          "row": 0,
+          "col": 0,
+          "file": "agentWell.r0c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 0,
+            "w": 93,
+            "h": 93
+          },
+          "referencePt": {
+            "w": 31.0,
+            "h": 31.0
+          },
+          "actualPx": {
+            "w": 93,
+            "h": 93
+          },
+          "sha256": "5ef32f842cbcf2d98af4107bb3dbd76be61f62ce194e1e7336366a98cecf4118",
+          "bytes": 8750
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "file": "agentWell.r0c1.png",
+          "sourceRectPx": {
+            "x": 93,
+            "y": 0,
+            "w": 192,
+            "h": 93
+          },
+          "referencePt": {
+            "w": 64.0,
+            "h": 31.0
+          },
+          "actualPx": {
+            "w": 192,
+            "h": 93
+          },
+          "sha256": "f8f1f9cd0bd6aa0cb1413201ac396c658b48cb300154c22cc8e92de373bd1a1f",
+          "bytes": 12592
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "file": "agentWell.r0c2.png",
+          "sourceRectPx": {
+            "x": 285,
+            "y": 0,
+            "w": 93,
+            "h": 93
+          },
+          "referencePt": {
+            "w": 31.0,
+            "h": 31.0
+          },
+          "actualPx": {
+            "w": 93,
+            "h": 93
+          },
+          "sha256": "0939b5dbdabda2e26e0ea37088f847b1c60dcd915a0014e0ec03d2dabc26a349",
+          "bytes": 8224
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "file": "agentWell.r1c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 93,
+            "w": 93,
+            "h": 174
+          },
+          "referencePt": {
+            "w": 31.0,
+            "h": 58.0
+          },
+          "actualPx": {
+            "w": 93,
+            "h": 174
+          },
+          "sha256": "d23c3af675666989341f8858de0bd304dd6b5a8a3d40db917ce3f05ee28f281c",
+          "bytes": 13879
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "file": "agentWell.r1c1.png",
+          "sourceRectPx": {
+            "x": 93,
+            "y": 93,
+            "w": 192,
+            "h": 174
+          },
+          "referencePt": {
+            "w": 64.0,
+            "h": 58.0
+          },
+          "actualPx": {
+            "w": 192,
+            "h": 174
+          },
+          "sha256": "cb5c8e5f30e7b1b42ea38c55f294ece9658c5fa4ad323ffce8096d34950e8180",
+          "bytes": 25450
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "file": "agentWell.r1c2.png",
+          "sourceRectPx": {
+            "x": 285,
+            "y": 93,
+            "w": 93,
+            "h": 174
+          },
+          "referencePt": {
+            "w": 31.0,
+            "h": 58.0
+          },
+          "actualPx": {
+            "w": 93,
+            "h": 174
+          },
+          "sha256": "93dd66f46f8a12d1837f08459552c168dff485b546ed3ada78a7b92b7b6feeeb",
+          "bytes": 13690
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "file": "agentWell.r2c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 267,
+            "w": 93,
+            "h": 93
+          },
+          "referencePt": {
+            "w": 31.0,
+            "h": 31.0
+          },
+          "actualPx": {
+            "w": 93,
+            "h": 93
+          },
+          "sha256": "ea7b62c3bb333cafd3757ea2d272745875fd92e3cde9a9834617fa01d4134228",
+          "bytes": 8619
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "file": "agentWell.r2c1.png",
+          "sourceRectPx": {
+            "x": 93,
+            "y": 267,
+            "w": 192,
+            "h": 93
+          },
+          "referencePt": {
+            "w": 64.0,
+            "h": 31.0
+          },
+          "actualPx": {
+            "w": 192,
+            "h": 93
+          },
+          "sha256": "27c4522cc60f33b7f462d4bceb57c95a580c19ef7460ac273d0c061f4a163da4",
+          "bytes": 13311
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "file": "agentWell.r2c2.png",
+          "sourceRectPx": {
+            "x": 285,
+            "y": 267,
+            "w": 93,
+            "h": 93
+          },
+          "referencePt": {
+            "w": 31.0,
+            "h": 31.0
+          },
+          "actualPx": {
+            "w": 93,
+            "h": 93
+          },
+          "sha256": "e832b32bc346a28407021068e9e4682c6da697a9a6732e67e3b69d719ef751ff",
+          "bytes": 8947
+        }
+      ]
+    },
+    "commandWell": {
+      "referencePt": {
+        "w": 126,
+        "h": 100
+      },
+      "actualPx": {
+        "w": 378,
+        "h": 300
+      },
+      "contentRectPt": {
+        "x": 8,
+        "y": 8,
+        "w": 110,
+        "h": 84
+      },
+      "paddingPt": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "capInsetsPt": {
+        "top": 21,
+        "right": 21,
+        "bottom": 21,
+        "left": 21
+      },
+      "alphaMode": "baked-shape",
+      "bakedMask": {
+        "shape": "rrect",
+        "radiusPt": 18,
+        "outsetPt": 3,
+        "supersample": 4,
+        "resample": "LANCZOS"
+      },
+      "sourceImage": {
+        "file": "docs/deck-design/renders/responsive-primitives/commandWell-rgba.png",
+        "sha256": "cfe5fed8b0dfb71f66fc92c533e404900a621343c102beda621bd7916241d3b2",
+        "bytes": 86167
+      },
+      "placement": {
+        "reference": "logical-well-rect",
+        "padding": "fixed-pt"
+      },
+      "patches": [
+        {
+          "row": 0,
+          "col": 0,
+          "file": "commandWell.r0c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 0,
+            "w": 87,
+            "h": 87
+          },
+          "referencePt": {
+            "w": 29.0,
+            "h": 29.0
+          },
+          "actualPx": {
+            "w": 87,
+            "h": 87
+          },
+          "sha256": "c4b11eb0090e4d23e9fd6aa0a4bfbc0f7d4c1fb92d2f078804ee4149912b4b31",
+          "bytes": 6997
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "file": "commandWell.r0c1.png",
+          "sourceRectPx": {
+            "x": 87,
+            "y": 0,
+            "w": 204,
+            "h": 87
+          },
+          "referencePt": {
+            "w": 68.0,
+            "h": 29.0
+          },
+          "actualPx": {
+            "w": 204,
+            "h": 87
+          },
+          "sha256": "a37908a88ef327e73a4fb99c4a08c0696e4cd3212db98417f65627f384723d82",
+          "bytes": 10467
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "file": "commandWell.r0c2.png",
+          "sourceRectPx": {
+            "x": 291,
+            "y": 0,
+            "w": 87,
+            "h": 87
+          },
+          "referencePt": {
+            "w": 29.0,
+            "h": 29.0
+          },
+          "actualPx": {
+            "w": 87,
+            "h": 87
+          },
+          "sha256": "41806df4071829b819fdf02a93dc1e47194dd4bddf78e38115e24681b3f87c5e",
+          "bytes": 6985
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "file": "commandWell.r1c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 87,
+            "w": 87,
+            "h": 126
+          },
+          "referencePt": {
+            "w": 29.0,
+            "h": 42.0
+          },
+          "actualPx": {
+            "w": 87,
+            "h": 126
+          },
+          "sha256": "a74bdd31b8aaec30f196e0907c7c060ff2a5b0f86d83e0bd4f79895edca5465f",
+          "bytes": 8901
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "file": "commandWell.r1c1.png",
+          "sourceRectPx": {
+            "x": 87,
+            "y": 87,
+            "w": 204,
+            "h": 126
+          },
+          "referencePt": {
+            "w": 68.0,
+            "h": 42.0
+          },
+          "actualPx": {
+            "w": 204,
+            "h": 126
+          },
+          "sha256": "40c588f15d4283a8dfcc18f580aa9897e0420147b7e047d0b5455fef0c0d6bfa",
+          "bytes": 15587
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "file": "commandWell.r1c2.png",
+          "sourceRectPx": {
+            "x": 291,
+            "y": 87,
+            "w": 87,
+            "h": 126
+          },
+          "referencePt": {
+            "w": 29.0,
+            "h": 42.0
+          },
+          "actualPx": {
+            "w": 87,
+            "h": 126
+          },
+          "sha256": "fd88a9f3cc7833b536d9da5264372bef549458d0c8a19b805708b850c61d2e6d",
+          "bytes": 9604
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "file": "commandWell.r2c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 213,
+            "w": 87,
+            "h": 87
+          },
+          "referencePt": {
+            "w": 29.0,
+            "h": 29.0
+          },
+          "actualPx": {
+            "w": 87,
+            "h": 87
+          },
+          "sha256": "71fc7edbd5769f37cf5f562f8000e980b9657fdafb622504db1abf1cd5e4dc5a",
+          "bytes": 7042
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "file": "commandWell.r2c1.png",
+          "sourceRectPx": {
+            "x": 87,
+            "y": 213,
+            "w": 204,
+            "h": 87
+          },
+          "referencePt": {
+            "w": 68.0,
+            "h": 29.0
+          },
+          "actualPx": {
+            "w": 204,
+            "h": 87
+          },
+          "sha256": "cc603bdc4597fb45096e93a51c6ff704b361753c42d0d38a9e5e1089bdf98cf2",
+          "bytes": 10893
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "file": "commandWell.r2c2.png",
+          "sourceRectPx": {
+            "x": 291,
+            "y": 213,
+            "w": 87,
+            "h": 87
+          },
+          "referencePt": {
+            "w": 29.0,
+            "h": 29.0
+          },
+          "actualPx": {
+            "w": 87,
+            "h": 87
+          },
+          "sha256": "0187283098cec9c1f8fc68b8a2fd043de2640302009b1999f33fcbeb00abbdf4",
+          "bytes": 8055
+        }
+      ]
+    },
+    "pttWell": {
+      "referencePt": {
+        "w": 130,
+        "h": 134
+      },
+      "actualPx": {
+        "w": 390,
+        "h": 402
+      },
+      "contentRectPt": {
+        "x": 8,
+        "y": 8,
+        "w": 114,
+        "h": 118
+      },
+      "paddingPt": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "capInsetsPt": {
+        "top": 27,
+        "right": 27,
+        "bottom": 27,
+        "left": 27
+      },
+      "alphaMode": "baked-shape",
+      "bakedMask": {
+        "shape": "rrect",
+        "radiusPt": 24,
+        "outsetPt": 3,
+        "supersample": 4,
+        "resample": "LANCZOS"
+      },
+      "sourceImage": {
+        "file": "docs/deck-design/renders/responsive-primitives/pttWell-rgba.png",
+        "sha256": "f505deb42f234ef12ee34b960d3c5d1986f06578c31178bfd9122ecc750c498d",
+        "bytes": 119382
+      },
+      "placement": {
+        "reference": "voice-sprite-rect",
+        "padding": "fixed-pt",
+        "contentWidthRatio": 0.9633802816901409,
+        "contentHeightRatio": 0.9672131147540983,
+        "alignment": "center"
+      },
+      "patches": [
+        {
+          "row": 0,
+          "col": 0,
+          "file": "pttWell.r0c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 0,
+            "w": 105,
+            "h": 105
+          },
+          "referencePt": {
+            "w": 35.0,
+            "h": 35.0
+          },
+          "actualPx": {
+            "w": 105,
+            "h": 105
+          },
+          "sha256": "03456e1200951bcba0d5f963c82deafd5a00005674cc95ec2dd8531faccdc8e3",
+          "bytes": 10807
+        },
+        {
+          "row": 0,
+          "col": 1,
+          "file": "pttWell.r0c1.png",
+          "sourceRectPx": {
+            "x": 105,
+            "y": 0,
+            "w": 180,
+            "h": 105
+          },
+          "referencePt": {
+            "w": 60.0,
+            "h": 35.0
+          },
+          "actualPx": {
+            "w": 180,
+            "h": 105
+          },
+          "sha256": "22699055cb00ebeab7c49619767f2fe78bc5ccd844b8a8f9499b61b36b186c44",
+          "bytes": 11578
+        },
+        {
+          "row": 0,
+          "col": 2,
+          "file": "pttWell.r0c2.png",
+          "sourceRectPx": {
+            "x": 285,
+            "y": 0,
+            "w": 105,
+            "h": 105
+          },
+          "referencePt": {
+            "w": 35.0,
+            "h": 35.0
+          },
+          "actualPx": {
+            "w": 105,
+            "h": 105
+          },
+          "sha256": "28b6c55a36f1c47e839a27718f82cbea8c7d7efa18d6996f3381d90aa47148f7",
+          "bytes": 9249
+        },
+        {
+          "row": 1,
+          "col": 0,
+          "file": "pttWell.r1c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 105,
+            "w": 105,
+            "h": 192
+          },
+          "referencePt": {
+            "w": 35.0,
+            "h": 64.0
+          },
+          "actualPx": {
+            "w": 105,
+            "h": 192
+          },
+          "sha256": "db7a3a610b15a329318a4be676f673f592aa5cd03f6feeec542d840c1f00dcd9",
+          "bytes": 16100
+        },
+        {
+          "row": 1,
+          "col": 1,
+          "file": "pttWell.r1c1.png",
+          "sourceRectPx": {
+            "x": 105,
+            "y": 105,
+            "w": 180,
+            "h": 192
+          },
+          "referencePt": {
+            "w": 60.0,
+            "h": 64.0
+          },
+          "actualPx": {
+            "w": 180,
+            "h": 192
+          },
+          "sha256": "50c193db86eae9f3c334f52cb0c68ed8cebb2a7e7b18b0a4d45097623f157fab",
+          "bytes": 20393
+        },
+        {
+          "row": 1,
+          "col": 2,
+          "file": "pttWell.r1c2.png",
+          "sourceRectPx": {
+            "x": 285,
+            "y": 105,
+            "w": 105,
+            "h": 192
+          },
+          "referencePt": {
+            "w": 35.0,
+            "h": 64.0
+          },
+          "actualPx": {
+            "w": 105,
+            "h": 192
+          },
+          "sha256": "9042ce5cf85cd1c551eac0b7b50de554719398ca8d4ee18bee5667060360378d",
+          "bytes": 15909
+        },
+        {
+          "row": 2,
+          "col": 0,
+          "file": "pttWell.r2c0.png",
+          "sourceRectPx": {
+            "x": 0,
+            "y": 297,
+            "w": 105,
+            "h": 105
+          },
+          "referencePt": {
+            "w": 35.0,
+            "h": 35.0
+          },
+          "actualPx": {
+            "w": 105,
+            "h": 105
+          },
+          "sha256": "274c39e7a5e22144dc808c4870b1cb6da3e20bb38f52bc1386ac4561183336e9",
+          "bytes": 9989
+        },
+        {
+          "row": 2,
+          "col": 1,
+          "file": "pttWell.r2c1.png",
+          "sourceRectPx": {
+            "x": 105,
+            "y": 297,
+            "w": 180,
+            "h": 105
+          },
+          "referencePt": {
+            "w": 60.0,
+            "h": 35.0
+          },
+          "actualPx": {
+            "w": 180,
+            "h": 105
+          },
+          "sha256": "925933291882b536900589dce01230e4dc237383a882187ccbcbef2aacda789a",
+          "bytes": 11882
+        },
+        {
+          "row": 2,
+          "col": 2,
+          "file": "pttWell.r2c2.png",
+          "sourceRectPx": {
+            "x": 285,
+            "y": 297,
+            "w": 105,
+            "h": 105
+          },
+          "referencePt": {
+            "w": 35.0,
+            "h": 35.0
+          },
+          "actualPx": {
+            "w": 105,
+            "h": 105
+          },
+          "sha256": "e9491b2eb2a3d389ce1a61d58e7fc3d8c349c04e5babba4507059d334379172a",
+          "bytes": 10783
+        }
+      ]
+    },
+    "stickRing": {
+      "referencePt": {
+        "w": 128.33333333333331,
+        "h": 128.33333333333331
+      },
+      "actualPx": {
+        "w": 385,
+        "h": 385
+      },
+      "contentRectPt": {
+        "x": 8,
+        "y": 8,
+        "w": 112.33333333333333,
+        "h": 112.33333333333333
+      },
+      "paddingPt": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "capInsetsPt": null,
+      "alphaMode": "baked-shape",
+      "bakedMask": {
+        "shape": "circle",
+        "radiusPt": 54,
+        "outsetPt": 3,
+        "supersample": 4,
+        "resample": "LANCZOS"
+      },
+      "sourceImage": {
+        "file": "docs/deck-design/renders/responsive-primitives/stickRing-rgba.png",
+        "sha256": "d304e3268da2bbfd6817fe4b6b538c190260a221ba782849df5b20a1fe63a6e0",
+        "bytes": 144313
+      },
+      "placement": {
+        "reference": "control-shortside",
+        "contentSidePt": 112.33333333333333,
+        "paddingScale": "control-shortside / contentSidePt",
+        "alignment": "center"
+      },
+      "file": "stickRing.png",
+      "sha256": "d304e3268da2bbfd6817fe4b6b538c190260a221ba782849df5b20a1fe63a6e0",
+      "bytes": 144313,
+      "preserveAspect": true
+    },
+    "dialTicks": {
+      "referencePt": {
+        "w": 128.33333333333331,
+        "h": 128.33333333333331
+      },
+      "actualPx": {
+        "w": 385,
+        "h": 385
+      },
+      "contentRectPt": {
+        "x": 8,
+        "y": 8,
+        "w": 112.33333333333333,
+        "h": 112.33333333333333
+      },
+      "paddingPt": {
+        "top": 8,
+        "right": 8,
+        "bottom": 8,
+        "left": 8
+      },
+      "capInsetsPt": null,
+      "alphaMode": "baked-shape",
+      "bakedMask": {
+        "shape": "circle",
+        "radiusPt": 54,
+        "outsetPt": 3,
+        "supersample": 4,
+        "resample": "LANCZOS"
+      },
+      "sourceImage": {
+        "file": "docs/deck-design/renders/responsive-primitives/dialTicks-rgba.png",
+        "sha256": "856a21c2fa91c5b636c1ea476b80bd968a57d77b9b521c37000832569039665e",
+        "bytes": 135074
+      },
+      "placement": {
+        "reference": "control-shortside",
+        "contentSidePt": 112.33333333333333,
+        "paddingScale": "control-shortside / contentSidePt",
+        "alignment": "center"
+      },
+      "file": "dialTicks.png",
+      "sha256": "856a21c2fa91c5b636c1ea476b80bd968a57d77b9b521c37000832569039665e",
+      "bytes": 135074,
+      "preserveAspect": true
+    }
+  },
+  "renderer": {
+    "blender": "5.2.1 LTS",
+    "engine": "CYCLES",
+    "device": "GPU",
+    "samples": 128,
+    "pxPerPt": 3,
+    "denoising": true,
+    "viewTransform": "Khronos PBR Neutral",
+    "exposure": -0.10000000149011612,
+    "movingPartObjects": 0,
+    "dialTicks": 32,
+    "stickRings": 1,
+    "lights": [
+      [
+        "key",
+        [
+          -4.5,
+          6,
+          9
+        ],
+        7,
+        2200,
+        [
+          1,
+          0.97,
+          0.94
+        ]
+      ],
+      [
+        "fill",
+        [
+          5,
+          -2.5,
+          8
+        ],
+        9,
+        420,
+        [
+          0.85,
+          0.92,
+          1
+        ]
+      ],
+      [
+        "rim",
+        [
+          0,
+          -7,
+          3
+        ],
+        5,
+        260,
+        [
+          0.9,
+          0.95,
+          1
+        ]
+      ]
+    ]
+  },
+  "provenance": {
+    "files": {
+      "docs/deck-design/blender/deck_responsive_primitives.py": "8a7d49df22e2a71bf5488de94769a4c5383fe7f62f874367a0c28369cd89e293",
+      "docs/deck-design/blender/deck_scene.py": "da4e27ade06eb3c3b618c06a7c4e297bbb5b569f0376e89f39af171ec8c8ff2d",
+      "scripts/deck-assets/build-responsive-primitives.py": "465473f6e3274c566fcf4233afdda0be3191d0e8349bb989e21c626e0ee1f4af",
+      "docs/deck-design/renders/responsive-primitives/render-metadata.json": "d243bc846d70b39d9f013f7daf798ed1083a6cfd6937a0fd8b5f1018a2010e06",
+      "docs/deck-design/renders/responsive-primitives/lcdWell-rgba.png": "26690cbc4d7aa6cfba2dc466aa7c87d05ab91ea206f649b94cef28687396324b",
+      "docs/deck-design/renders/responsive-primitives/agentWell-rgba.png": "a0d12a2c354a1a28dde8c8977aae0d58e63784d093404c887598c40311ee66c9",
+      "docs/deck-design/renders/responsive-primitives/commandWell-rgba.png": "cfe5fed8b0dfb71f66fc92c533e404900a621343c102beda621bd7916241d3b2",
+      "docs/deck-design/renders/responsive-primitives/pttWell-rgba.png": "f505deb42f234ef12ee34b960d3c5d1986f06578c31178bfd9122ecc750c498d",
+      "docs/deck-design/renders/responsive-primitives/stickRing-rgba.png": "d304e3268da2bbfd6817fe4b6b538c190260a221ba782849df5b20a1fe63a6e0",
+      "docs/deck-design/renders/responsive-primitives/dialTicks-rgba.png": "856a21c2fa91c5b636c1ea476b80bd968a57d77b9b521c37000832569039665e",
+      "docs/deck-design/renders/responsive-primitives/metal-raw.png": "fca98033bf39e3a103fbb18fcca54d14199e4ca65f754d439fd9bae295cb474f",
+      "docs/deck-design/renders/responsive-primitives/atlas-raw.png": "62d313b5e8ffda8f77d2ad4e505c0360b6f36690d632d63bbc40e912c1d762a3"
+    }
+  },
+  "generator": {
+    "file": "scripts/deck-assets/build-responsive-primitives.py",
+    "sha256": "465473f6e3274c566fcf4233afdda0be3191d0e8349bb989e21c626e0ee1f4af",
+    "python": "3.12.4",
+    "pillow": "12.1.1"
+  },
+  "shippingPngCount": 39,
+  "ninePatchContract": "capInsetsPt is inside contentRectPt; paddingPt is outside. Outer fixed edge = paddingPt + capInsetsPt. Stretch only middle row/column; compose nine images identically on every OS."
+}

@@ -1,0 +1,571 @@
+{
+ "pxPerPt": 3,
+ "basePt": {
+  "w": 624,
+  "h": 784
+ },
+ "sprites": {
+  "agent_amber_up": {
+   "file": "agent_amber_up.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_amber_pressed": {
+   "file": "agent_amber_pressed.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_amber_selected": {
+   "file": "agent_amber_selected.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_violet_up": {
+   "file": "agent_violet_up.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_violet_pressed": {
+   "file": "agent_violet_pressed.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_violet_selected": {
+   "file": "agent_violet_selected.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_blue_up": {
+   "file": "agent_blue_up.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_blue_pressed": {
+   "file": "agent_blue_pressed.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_blue_selected": {
+   "file": "agent_blue_selected.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_green_up": {
+   "file": "agent_green_up.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_green_pressed": {
+   "file": "agent_green_pressed.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_green_selected": {
+   "file": "agent_green_selected.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_red_up": {
+   "file": "agent_red_up.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_red_pressed": {
+   "file": "agent_red_pressed.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_red_selected": {
+   "file": "agent_red_selected.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_gray_up": {
+   "file": "agent_gray_up.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_gray_pressed": {
+   "file": "agent_gray_pressed.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_gray_selected": {
+   "file": "agent_gray_selected.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_off_up": {
+   "file": "agent_off_up.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_off_pressed": {
+   "file": "agent_off_pressed.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "agent_off_selected": {
+   "file": "agent_off_selected.png",
+   "x": 121.0,
+   "y": 223.0,
+   "w": 114.0,
+   "h": 118.0,
+   "px": {
+    "x": 363,
+    "y": 669,
+    "w": 342,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 60
+  },
+  "cmd_up": {
+   "file": "cmd_up.png",
+   "x": 541.0,
+   "y": 223.0,
+   "w": 74.0,
+   "h": 118.0,
+   "px": {
+    "x": 1623,
+    "y": 669,
+    "w": 222,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 54
+  },
+  "cmd_pressed": {
+   "file": "cmd_pressed.png",
+   "x": 541.0,
+   "y": 223.0,
+   "w": 74.0,
+   "h": 118.0,
+   "px": {
+    "x": 1623,
+    "y": 669,
+    "w": 222,
+    "h": 354
+   },
+   "mask": "rrect",
+   "radiusPx": 54
+  },
+  "ptt_up": {
+   "file": "ptt_up.png",
+   "x": 253.0,
+   "y": 621.0,
+   "w": 118.0,
+   "h": 122.0,
+   "px": {
+    "x": 759,
+    "y": 1863,
+    "w": 354,
+    "h": 366
+   },
+   "mask": "rrect",
+   "radiusPx": 66
+  },
+  "ptt_pressed": {
+   "file": "ptt_pressed.png",
+   "x": 253.0,
+   "y": 621.0,
+   "w": 118.0,
+   "h": 122.0,
+   "px": {
+    "x": 759,
+    "y": 1863,
+    "w": 354,
+    "h": 366
+   },
+   "mask": "rrect",
+   "radiusPx": 66
+  },
+  "ptt_active": {
+   "file": "ptt_active.png",
+   "x": 253.0,
+   "y": 621.0,
+   "w": 118.0,
+   "h": 122.0,
+   "px": {
+    "x": 759,
+    "y": 1863,
+    "w": 354,
+    "h": 366
+   },
+   "mask": "rrect",
+   "radiusPx": 66
+  },
+  "stick_center": {
+   "file": "stick_center.png",
+   "x": 46.0,
+   "y": 626.0,
+   "w": 112.0,
+   "h": 112.0,
+   "px": {
+    "x": 138,
+    "y": 1878,
+    "w": 336,
+    "h": 336
+   },
+   "mask": "circle",
+   "radiusPx": 0
+  },
+  "stick_left": {
+   "file": "stick_left.png",
+   "x": 46.0,
+   "y": 626.0,
+   "w": 112.0,
+   "h": 112.0,
+   "px": {
+    "x": 138,
+    "y": 1878,
+    "w": 336,
+    "h": 336
+   },
+   "mask": "circle",
+   "radiusPx": 0
+  },
+  "stick_right": {
+   "file": "stick_right.png",
+   "x": 46.0,
+   "y": 626.0,
+   "w": 112.0,
+   "h": 112.0,
+   "px": {
+    "x": 138,
+    "y": 1878,
+    "w": 336,
+    "h": 336
+   },
+   "mask": "circle",
+   "radiusPx": 0
+  },
+  "stick_up": {
+   "file": "stick_up.png",
+   "x": 46.0,
+   "y": 626.0,
+   "w": 112.0,
+   "h": 112.0,
+   "px": {
+    "x": 138,
+    "y": 1878,
+    "w": 336,
+    "h": 336
+   },
+   "mask": "circle",
+   "radiusPx": 0
+  },
+  "stick_down": {
+   "file": "stick_down.png",
+   "x": 46.0,
+   "y": 626.0,
+   "w": 112.0,
+   "h": 112.0,
+   "px": {
+    "x": 138,
+    "y": 1878,
+    "w": 336,
+    "h": 336
+   },
+   "mask": "circle",
+   "radiusPx": 0
+  },
+  "dial": {
+   "file": "dial.png",
+   "x": 466.0,
+   "y": 626.0,
+   "w": 112.0,
+   "h": 112.0,
+   "px": {
+    "x": 1398,
+    "y": 1878,
+    "w": 336,
+    "h": 336
+   },
+   "mask": "circle",
+   "radiusPx": 0
+  }
+ },
+ "layout": {
+  "agentSlotsPt": [
+   [
+    16.0,
+    230.0
+   ],
+   [
+    128.0,
+    230.0
+   ],
+   [
+    240.0,
+    230.0
+   ],
+   [
+    352.0,
+    230.0
+   ],
+   [
+    16.0,
+    350.0
+   ],
+   [
+    128.0,
+    350.0
+   ],
+   [
+    240.0,
+    350.0
+   ],
+   [
+    352.0,
+    350.0
+   ],
+   [
+    16.0,
+    470.0
+   ],
+   [
+    128.0,
+    470.0
+   ],
+   [
+    240.0,
+    470.0
+   ],
+   [
+    352.0,
+    470.0
+   ]
+  ],
+  "cmdSlotsPt": [
+   [
+    470.0,
+    230.0
+   ],
+   [
+    548.0,
+    230.0
+   ],
+   [
+    470.0,
+    350.0
+   ],
+   [
+    548.0,
+    350.0
+   ],
+   [
+    470.0,
+    470.0
+   ],
+   [
+    548.0,
+    470.0
+   ]
+  ],
+  "agentSpriteRefPt": [
+   128.0,
+   230.0
+  ]
+ }
+}

@@ -1,0 +1,80 @@
+# Source of truth for the design-time string table: (key, en, ko, ja, zh-Hans, critical, note)
+# en and ko are the built-in languages. ja and zh-Hans are sample drafts to exercise the language-pack design.
+C = True
+N = False
+ROWS = [
+ # deck face
+ ("cmd.allow", "Allow", "허용", "許可", "允许", C, "Command key; opens the confirmation sheet"),
+ ("cmd.reject", "Reject", "거부", "拒否", "拒绝", C, "Command key; opens the confirmation sheet"),
+ ("cmd.content", "Content", "내용", "内容", "内容", N, "Also the field label on sheets"),
+ ("cmd.input", "Input", "입력", "入力", "输入", N, ""),
+ ("cmd.next", "Next up", "다음 판단", "次の判断", "下个待处理", N, "Count badge beside it is a number"),
+ ("cmd.list", "List", "목록", "一覧", "列表", N, "Also the list-mode switch"),
+ ("ptt.hold", "Hold to talk", "꾹 눌러 말하기", "長押しで話す", "按住说话", N, "Push-to-talk label"),
+ ("ptt.recording", "Recording", "말하는 중", "録音中", "录音中", N, ""),
+ ("mode.deck", "Deck", "덱", "デッキ", "面板", N, "List-mode switch"),
+ # states
+ ("state.permission", "Approval request", "승인 요청", "承認依頼", "审批请求", N, "Agent key state name"),
+ ("state.question", "Question", "질문", "質問", "提问", N, ""),
+ ("state.review", "Review result", "결과 검토", "結果確認", "查看结果", N, ""),
+ ("state.working", "Working", "진행 중", "作業中", "进行中", N, ""),
+ ("state.done", "Done", "완료", "完了", "已完成", N, ""),
+ ("state.failed", "Failed", "실패", "失敗", "失败", N, ""),
+ ("state.idle", "Idle", "대기", "待機中", "空闲", N, ""),
+ ("state.unknown", "Unknown", "알 수 없음", "不明", "未知", N, ""),
+ # link
+ ("link.uncertain", "Link uncertain", "연결 불확실", "接続が不確か", "连接不确定", N, ""),
+ ("link.unpaired", "Not paired", "미연결", "未ペアリング", "未配对", N, ""),
+ ("link.scan", "Scan QR", "QR 스캔", "QRをスキャン", "扫描二维码", N, ""),
+ ("link.reconnect", "Reconnect", "다시 연결", "再接続", "重新连接", N, ""),
+ ("link.unpair", "Unpair", "연결 해제", "ペアリング解除", "取消配对", C, "Destructive"),
+ # confirmation sheet
+ ("send.hold", "Hold to send", "꾹 눌러 전송", "長押しで送信", "按住发送", C, "Hold 0.8 s"),
+ ("send.cancel", "Cancel", "취소", "キャンセル", "取消", C, ""),
+ ("send.timeLeft", "Time left", "남은 시간", "残り時間", "剩余时间", C, ""),
+ ("send.voiceDraft", "Voice draft", "음성 초안", "音声ドラフト", "语音草稿", N, ""),
+ ("send.editDraft", "Edit draft", "초안 편집", "ドラフトを編集", "编辑草稿", N, ""),
+ ("field.host", "Host", "호스트", "ホスト", "主机", C, "Target identity"),
+ ("field.version", "Version", "버전", "バージョン", "版本", N, ""),
+ ("field.generation", "Generation", "세대", "世代", "代数", N, "Link generation number"),
+ ("field.worktree", "Worktree", "워크트리", "ワークツリー", "工作树", C, "Target identity"),
+ ("field.terminal", "Terminal", "터미널", "ターミナル", "终端", C, "Target identity"),
+ ("field.handle", "Handle", "핸들", "ハンドル", "句柄", C, "Target identity"),
+ ("field.command", "Command", "명령", "コマンド", "命令", C, ""),
+ ("field.source", "Source", "출처", "出所", "来源", C, ""),
+ ("count.chars.one", "{n} char", "{n}자", "{n}文字", "{n}字", C, "English singular; other languages repeat the other form"),
+ ("count.chars.other", "{n} chars", "{n}자", "{n}文字", "{n}字", C, ""),
+ # request content sheet
+ ("req.title", "Command approval request", "명령 실행 승인 요청", "コマンド実行の承認依頼", "命令执行审批请求", C, ""),
+ ("req.verified", "Verified", "확인됨", "確認済み", "已验证", C, "Only for a verified structured request"),
+ ("req.structured", "Orca structured request", "Orca 구조화 요청", "Orca の構造化リクエスト", "Orca 结构化请求", C, ""),
+ ("req.allowSession", "Allow this session", "이 세션 허용", "このセッションで許可", "本次会话允许", C, "Wide scope; never on the deck"),
+ ("req.wideScope", "Wide scope", "범위 넓음", "範囲が広い", "范围较大", C, "Warning chip"),
+ ("req.stop", "Stop", "중지", "停止", "停止", C, "Never on the deck"),
+ ("req.confirmWindow", "Confirm {s}s", "전송 확인 {s}s", "送信確認 {s}s", "发送确认 {s}s", C, ""),
+ # status sheet
+ ("status.unresolved", "Unresolved results", "미해결 결과", "未解決の結果", "未解决的结果", N, ""),
+ ("status.checked", "Checked", "확인했음", "確認した", "已确认", C, "Marks a result resolved after checking in Orca"),
+ ("status.inputUnknown", "Input · outcome unknown", "입력 · 알 수 없음", "入力・結果不明", "输入·结果未知", N, ""),
+ ("status.inputPartial", "Input · partly sent", "입력 · 일부 전송", "入力・一部送信", "输入·部分发送", N, ""),
+ ("status.history", "History", "기록", "履歴", "历史记录", N, ""),
+ ("status.guide", "Guide", "안내", "ガイド", "指南", N, ""),
+ # list, dialog
+ ("list.all", "All", "전체", "すべて", "全部", N, "Filter chip"),
+ ("list.search", "Search title or host", "제목 · 호스트 검색", "タイトル・ホストを検索", "搜索标题或主机", N, ""),
+ ("list.noSlot", "No key", "키 없음", "キーなし", "无按键", N, "Screen-reader text for the dash"),
+ ("key.age", "Age", "경과", "経過", "已过时间", N, ""),
+ ("key.slot", "Key", "키", "キー", "按键", N, ""),
+ ("key.unresolved", "Unresolved", "미해결", "未解決", "未解决", N, ""),
+ ("key.clear", "Clear slot", "키 비우기", "キーを空ける", "清空按键", N, ""),
+ ("key.workingLocked", "Working · input locked", "진행 중 · 입력 잠김", "作業中・入力ロック", "进行中·输入已锁定", N, ""),
+ ("common.close", "Close", "닫기", "閉じる", "关闭", N, ""),
+ # settings
+ ("set.title", "Customize", "맞춤 설정", "カスタマイズ", "自定义", N, "Menu title"),
+ ("set.language", "Language", "언어", "言語", "语言", N, ""),
+ ("set.auto", "Auto (phone setting)", "자동 (휴대폰 설정)", "自動（端末の設定）", "自动（跟随手机）", N, ""),
+ ("set.layout", "Screen mode", "화면 모드", "画面モード", "界面模式", N, ""),
+ ("set.layoutAuto", "Auto", "자동", "自動", "自动", N, "Deck, or list when a screen reader or large text is on"),
+ ("set.sound", "Click sound", "클릭 소리", "クリック音", "点击音效", N, ""),
+]
+LANGS = [("en", "English", "en"), ("ko", "한국어", "ko"), ("ja", "日本語", "ja"), ("zh", "简体中文", "zh-Hans")]

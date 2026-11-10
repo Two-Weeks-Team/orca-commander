@@ -1,0 +1,10 @@
+{
+  "name": "deck-speech",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Foreground-only installed local speech for Orca Deck",
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "peerDependencies": { "expo": "*", "expo-modules-core": "*" }
+}

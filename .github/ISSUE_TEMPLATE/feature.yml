@@ -1,0 +1,14 @@
+name: Idea or external reference
+description: Suggest an improvement or share a primary source
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What task or problem would this address?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Observation, source links or proposal
+      description: Distinguish tested behavior from external claims and ideas. Do not include private data.

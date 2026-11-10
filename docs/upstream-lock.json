@@ -1,0 +1,61 @@
+{
+  "repository": "https://github.com/stablyai/orca",
+  "commit": "7e935c596129ff9bed35a4eaebd1b0a5668a2b98",
+  "desktopVersion": "1.4.214",
+  "mobileVersion": "0.0.1",
+  "vendorRoot": "apps/mobile/src/upstream/orca",
+  "files": [
+    {
+      "path": "mobile/src/transport/protocol-version.ts",
+      "sha256": "ef98d1c1a2a64e9433e8d0c62476a10615bf30b4e6709e411b425c095adc5262"
+    },
+    {
+      "path": "mobile/src/transport/protocol-compat.ts",
+      "sha256": "38c78674fcd3a58bf2b3d7a4313320f43d8cfa581bfcd8f7ac380058bcbb7966"
+    },
+    {
+      "path": "mobile/src/transport/mobile-relay-connect-url.ts",
+      "sha256": "6ae66834eec0c9d5af828df36fa525db650332ef3b77c3a419f9659f0666f1a7"
+    },
+    {
+      "path": "mobile/src/transport/base64-byte-codec.ts",
+      "sha256": "76f077b24e3c0cc20ae63441326541aa2cb11966ffe3eacce5f9c6ff6e916570"
+    },
+    {
+      "path": "src/shared/mobile-pairing-base64.ts",
+      "sha256": "0259c2d7d14112d3bfbbef77c73829ef3f143f7196aa30dc870494edea8155b8"
+    },
+    {
+      "path": "src/shared/mobile-pairing-protocol-limits.ts",
+      "sha256": "c42b2db0fa40439b20d89b5cb347632c8cb2790d410385646d45c127938c80e8"
+    },
+    {
+      "path": "src/shared/mobile-relay-pairing-offer.ts",
+      "sha256": "936722ef1505ea5f2f4e4f33aa99434418470e966efdc501ea8eb7dcdd6679d5"
+    },
+    {
+      "path": "src/shared/runtime-host-descriptor.ts",
+      "sha256": "c73fcd96a79e51f304a5457aa40ba6f369bace78c40b852195512912a4a685f1"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-method-allowlist.ts",
+      "sha256": "262e17c7aba9deb3683625b952934073a37b66577d6137e58e082c6f5f376f5b"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-method-routing.ts",
+      "sha256": "62e9a4370ef90e570a24290acf77fd196a68969ea1b78fb57deedf01bb4c4561"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-agent-session-methods.ts",
+      "sha256": "9cda3c282607b45c61bd3f16179b7a9d400750d548a1904ee6e706ef0cb1dd56"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-paired-desktop-methods.ts",
+      "sha256": "b831ed348dfff4d5527996a023b2834baa86865b29575879edf84f98ce61144a"
+    },
+    {
+      "path": "src/shared/sidebar-inputs-switch.ts",
+      "sha256": "9ceba8842129f34d95c129575ca75de82fc3a1ba216bf9cb990a1951a3ec2350"
+    }
+  ]
+}

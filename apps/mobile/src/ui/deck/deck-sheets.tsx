@@ -1,0 +1,45 @@
+import {useRef,useState} from 'react';
+import {Pressable,ScrollView,View,StyleSheet,useWindowDimensions} from 'react-native';
+import {Image} from 'expo-image';
+import type {AgentSnapshot} from '../../core/types';
+import type {UsageSnapshot} from '../../adapters/usage';
+import {agentDisplay,formatAge} from '../../core/agent-display';
+import {useMessages} from '../../i18n/provider';
+import {deckSprites} from './deck-assets';
+import {sheetParts} from './sheet-assets';
+import {responsiveImages} from './responsive-assets';
+import {CommandKey,LCD,SheetSkinContext,SheetText,sheetNumber} from './sheet-controls';
+import {lookFor,StateMark,displayColor,providerIcon} from './state-mark';
+import {keyTitle} from './deck-layout';
+import {UsagePanel} from './usage-panel';
+import {stateName} from '../theme';
+export function AgentKeyList({rows,selectedKey,now,onSelect,onOpen,width,live=true}:{live?:boolean;rows:readonly{key:string;agent:AgentSnapshot;slot:number|null}[];selectedKey:string|null;now:number;onSelect(key:string):boolean;onOpen():void;width:number}){
+ const {t}=useMessages(),{fontScale}=useWindowDimensions(),columns=width>=700?3:2;
+ return <SheetSkinContext.Provider value={true}><View testID="deck-sheet-agent-grid" style={{flexDirection:'row',flexWrap:'wrap',gap:12}}>{rows.map(({key,agent,slot})=>{
+  const shown=agentDisplay(agent,now),look=lookFor(shown.kind),selected=key===selectedKey,age=formatAge(shown.since,now)??'—',mark=look.mark??look.ink;
+  const stateLabel=shown.kind==='stale'?t('state.stale',{time:formatAge(shown.since,now)??''}):shown.kind==='monitoring'||shown.kind==='stopping'||shown.kind==='unconfirmed'?t(`state.${shown.kind}`):stateName(agent.state,t);
+  return <Pressable key={key} testID={'deck-item-'+key} android_disableSound accessibilityRole="button" accessibilityLabel={[slot??t('list.noSlot'),agent.title,agent.provider,stateLabel,age].join(', ')} accessibilityState={{selected}} onPress={()=>{if(onSelect(key))onOpen();}} style={{width:columns===3?'31.8%':'48%',aspectRatio:110/104,minHeight:146*Math.min(1.5,fontScale),padding:14,justifyContent:'space-between'}}>
+   <Image cachePolicy="memory" accessible={false} pointerEvents="none" contentFit="fill" source={deckSprites[('agent_'+look.tone+'_'+(selected?'selected':'up')) as keyof typeof deckSprites]} style={StyleSheet.absoluteFill}/>
+   <View style={{flexDirection:'row',justifyContent:'space-between',alignItems:'center'}}><SheetText style={[sheetNumber,{fontSize:39,color:look.ink}]}>{slot??'–'}</SheetText><StateMark onDeckFace glyph={look.glyph} color={mark} size={26}/></View>
+   <SheetText numberOfLines={2} style={{fontWeight:'800',fontSize:14,color:look.ink}}>{keyTitle(agent.title)??agent.title}</SheetText>
+   <View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}><Image cachePolicy="memory" accessible={false} source={providerIcon(agent.provider)} tintColor={agent.provider==='claude'&&live?undefined:look.ink} contentFit="contain" style={{width:22,height:22}}/><View style={{width:7,height:7,borderRadius:4,backgroundColor:displayColor(shown.kind)}}/><SheetText style={[sheetNumber,{fontSize:26,color:look.ink}]}>{age}</SheetText></View>
+  </Pressable>;
+ })}</View></SheetSkinContext.Provider>;
+}
+/** One complete, selectable original; page controls move only the viewport. */
+export function DeckContent({agent,live,host,version,height,position,viewportHeight}:{agent:AgentSnapshot;live:boolean;host?:string;version?:string;width:number;height:number;position?:number;viewportHeight?:number}){
+ const {t}=useMessages(),scroll=useRef<ScrollView>(null),[metrics,setMetrics]=useState({height:1,content:1,offset:0}),[identityHeight,setIdentityHeight]=useState(160),[navigationHeight,setNavigationHeight]=useState(100);
+ // The outer ScrollView is unbounded on its content axis. Bound the inner reader
+ // to its measured viewport; only the minimum layout may overflow into outer scrolling.
+ const layoutHeight=Math.max(viewportHeight??Math.max(1,height*.9-220),identityHeight+navigationHeight+188);
+ const count=Math.max(1,Math.ceil(metrics.content/metrics.height)),page=metrics.offset+metrics.height>=metrics.content-1?count:Math.min(count,Math.floor(metrics.offset/metrics.height)+1);
+ const step=(n:number)=>{const y=Math.max(0,Math.min(metrics.content-metrics.height,metrics.offset+n*metrics.height));scroll.current?.scrollTo({y,animated:false});};
+ return <SheetSkinContext.Provider value={true}><View testID="deck-content-layout" style={{height:layoutHeight,flexShrink:0,minHeight:0,gap:12}}>
+  <LCD testID="deck-content-identity" onLayout={e=>{const h=e.nativeEvent.layout.height;setIdentityHeight(v=>v===h?v:h);}} style={{gap:5}}><View style={{flexDirection:'row',gap:10,alignItems:'center'}}><SheetText selectable numberOfLines={2} accessibilityRole="header" accessibilityLabel={[agent.provider,agent.title,stateName(live?agent.state:'unknown',t)].join(', ')} style={{fontSize:17,fontWeight:'800',flex:1}}>{agent.provider.toUpperCase()} · {agent.title}</SheetText><SheetText testID="deck-content-position" style={[sheetNumber,{fontSize:40,lineHeight:50}]}>{position??'—'}</SheetText></View><SheetText selectable numberOfLines={2} accessibilityLabel={([agent.place?.repo,agent.place?.worktreeName].filter(Boolean).join(' › ')||'—')+'\n'+([host,version].filter(Boolean).join(' · ')||'—')} style={{fontSize:13,lineHeight:19}}>{[agent.place?.repo,agent.place?.worktreeName].filter(Boolean).join(' › ')||'—'}{'\n'}{[host,version].filter(Boolean).join(' · ')||'—'}</SheetText></LCD>
+  <LCD style={{padding:14,flex:1,minHeight:148}}><ScrollView testID="deck-content-body-scroll" ref={scroll} nestedScrollEnabled style={{flex:1,minHeight:120}} onLayout={e=>{const height=Math.max(1,e.nativeEvent.layout.height);setMetrics(m=>({...m,height}));}} onContentSizeChange={(_,content)=>setMetrics(m=>({...m,content}))} onScroll={e=>setMetrics(m=>({...m,offset:e.nativeEvent.contentOffset.y}))} scrollEventThrottle={32}><SheetText testID="deck-content-full-body" selectable style={{fontSize:18,lineHeight:30,fontWeight:'700'}}>{agent.summary}</SheetText></ScrollView></LCD>
+  <View testID="deck-content-navigation" onLayout={e=>{const h=e.nativeEvent.layout.height;setNavigationHeight(v=>v===h?v:h);}} style={{flexDirection:'row',justifyContent:'space-around',alignItems:'center',gap:16,flexShrink:0}}><CommandKey label={t('pack.previousPage')} onPress={()=>step(-1)} style={{minHeight:72,minWidth:64,flex:1}}><SheetText style={{fontWeight:'800',fontSize:22}}>‹</SheetText><SheetText style={{fontWeight:'800'}}>{t('nav.previous')}</SheetText></CommandKey>
+   <Pressable android_disableSound accessibilityRole="adjustable" accessibilityLabel={t('cmd.content')} accessibilityValue={{min:1,max:count,now:page,text:page+'/'+count}} accessibilityActions={[{name:'increment'},{name:'decrement'}]} onAccessibilityAction={e=>step(e.nativeEvent.actionName==='decrement'?-1:1)} onPress={()=>step(page===count?-count:1)} style={{width:100,height:100,alignItems:'center',justifyContent:'center'}}><Image cachePolicy="memory" source={responsiveImages['dialTicks.png']} contentFit="contain" accessible={false} style={StyleSheet.absoluteFill}/><Image cachePolicy="memory" source={sheetParts['knob.png']} accessible={false} contentFit="contain" style={{position:'absolute',width:66,height:66}}/><SheetText numberOfLines={1} adjustsFontSizeToFit minimumFontScale={0.5} style={[sheetNumber,{width:60,textAlign:'center',fontSize:32,lineHeight:40,color:'#18212C'}]}>{page}/{count}</SheetText></Pressable>
+   <CommandKey label={t('pack.nextPage')} onPress={()=>step(1)} style={{minHeight:72,minWidth:64,flex:1}}><SheetText style={{fontWeight:'800',fontSize:22}}>›</SheetText><SheetText style={{fontWeight:'800'}}>{t('nav.next')}</SheetText></CommandKey></View>
+ </View></SheetSkinContext.Provider>;
+}
+export function StatusDisplay({link,host,version,generation,unresolved,usage,now,readAgeSeconds}:{link:string;host?:string;version?:string;generation?:number;unresolved:number|null;usage?:UsageSnapshot;now:number;readAgeSeconds?:number}){return <SheetSkinContext.Provider value={true}><LCD testID="deck-status-lcd"><View style={{flexDirection:'row',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:8}}><SheetText style={[sheetNumber,{fontSize:24,lineHeight:30,color:link==='LIVE'?'#8BE8AE':'#FF7A8A',flexShrink:1}]}>● {link}{link==='LIVE'?' '+(readAgeSeconds===undefined?'—':readAgeSeconds+'s'):''}</SheetText><SheetText style={[sheetNumber,{fontSize:52,lineHeight:64,color:unresolved===0?'#5F7A70':'#FF7A8A',flexShrink:1}]}>!{unresolved??'—'}</SheetText><SheetText style={[sheetNumber,{fontSize:28,lineHeight:35,flexShrink:1,flexWrap:'wrap'}]}>#{generation??'—'}</SheetText></View><View style={{flexDirection:'row',justifyContent:'space-between',gap:8,flexWrap:'wrap'}}><SheetText selectable style={{fontSize:18,fontWeight:'800',flexShrink:1}}>{host??'—'}</SheetText><SheetText selectable style={{fontSize:14,fontWeight:'800'}}>{version??'—'}</SheetText></View><UsagePanel usage={usage} now={now}/></LCD></SheetSkinContext.Provider>;}

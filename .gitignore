@@ -1,0 +1,23 @@
+node_modules/
+.expo/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+coverage/
+.test-build/
+dist/
+build/
+vendor/
+apps/mobile/ios/
+apps/mobile/android/
+*.apk
+*.aab
+*.ipa
+
+# Private evidence and generated local exports
+.public-audit/
+.private-evidence/
+__pycache__/
+*.py[cod]

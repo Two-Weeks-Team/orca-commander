@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {createRequire} from 'node:module';
+import vm from 'node:vm';
+import ts from 'typescript';
+const require=createRequire(import.meta.url),core=require('../.test-build/src/core/project-focus.js'),{bindKey}=require('../.test-build/src/core/deck-model.js');
+const source=readFileSync(new URL('../src/ui/deck-home.tsx',import.meta.url),'utf8'),ast=ts.createSourceFile('home.tsx',source,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
+let layout,commit;
+function visit(n){
+ if(ts.isVariableDeclaration(n)&&n.name.getText(ast)==='layout')layout=n.initializer;
+ if(ts.isCallExpression(n)&&n.expression.getText(ast)==='useEffect'&&n.arguments[0]?.getText(ast).includes('layoutHistory.current'))commit=n.arguments[0];
+ ts.forEachChild(n,visit);
+}visit(ast);assert.ok(layout);
+const evaluate=(node,env)=>vm.runInNewContext(ts.transpileModule(`(${node.getText(ast)})`,{compilerOptions:{target:ts.ScriptTarget.ES2022}}).outputText,env);
+const row=(id,output)=>({id,provider:'codex',title:id,state:'done',target:{hostId:'paired',worktreeId:'w',terminalId:id+':leaf'},terminalActivity:{present:true,lastOutputAt:output,stateStartedAt:1}});
+const history={current:{hostId:undefined,views:new Map()}};
+const render=(agents,scope='recent',hostId='paired')=>{
+ const env={...core,Map,layoutHistory:history,snapshot:{host:{hostId}},scope,faceKeys:6,project:{items:agents.map(bindKey)},inventory:{agents,live:true},presentSet:new Set(agents.map(bindKey)),useMemo:fn=>fn()};
+ const result=evaluate(layout,env);if(commit)evaluate(commit,{...env,layout:result})();return JSON.parse(JSON.stringify(result.keys));
+};
+const initial=['a','b','c','d','e','f'].map((id,i)=>row(id,60-i));
+const names=keys=>keys.map(key=>key===null?null:JSON.parse(key)[3].split(':')[0]);
+assert.deepEqual(names(render(initial)),['a','b','c','d','e','f']);
+const updated=initial.map(a=>a.id==='f'?row('f',100):a);
+assert.deepEqual(names(render(updated)),['a','b','c','d','e','f'],'Home must pass its committed previous numbered keys to recentView');
+assert.deepEqual(names(render([...updated,row('g',110)])),['a','b','c','d','g','f'],'only the departed top-six row releases its numbered key');
+assert.deepEqual(names(render([row('project-only',200)],'project:other')),['project-only',null,null,null,null,null]);
+assert.deepEqual(names(render([...updated,row('g',110)])),['a','b','c','d','g','f'],'a project detour cannot erase recent-view bindings');
+assert.deepEqual(names(render(updated,'recent','another-host')),['f','a','b','c','d','e'],'another host starts with its own ranking');
+console.log('PASS actual DeckHome layout: stable six keys, top-set replacement, isolated project and host bindings');

@@ -1,0 +1,51 @@
+{
+  "name": "orca-deck-mobile",
+  "version": "0.0.1",
+  "private": true,
+  "main": "expo-router/entry",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test:domain": "node ../../scripts/check-ui-messages.mjs && node tests/ui-message-guard.test.mjs && node tests/deck-text.test.mjs && node tests/responsive-assets.test.mjs && node tests/wide-assets.test.mjs && node tests/fold-approved-assets.test.mjs && node tests/confirmation-callbacks.test.mjs && node tests/typed-confirmation-callbacks.test.mjs && node tests/agent-instruction-ui.test.mjs && node tests/accepted-draft-owner.test.mjs && node tests/deck-input-keyboard-layout.test.mjs && node tests/journal-recovery.test.mjs && node tests/preferences-recovery.test.mjs && node tests/language-pack-actions.test.mjs && node tests/deck-recovery-routing.test.mjs && tsc -p tsconfig.domain.json && node tests/deck-cache-ui.test.mjs && node tests/responsive-ui.test.mjs && node tests/responsive-skin-ui.test.mjs && node .test-build/tests/skin-patches.test.js && node .test-build/tests/deck-display-cache.test.js && node .test-build/tests/lcd-live-selection.test.js && node .test-build/tests/core.test.js && node .test-build/tests/redaction.test.js && node .test-build/tests/advisor.test.js && node .test-build/tests/decision-card.test.js && node .test-build/tests/upstream-contract.test.js && node .test-build/tests/session-state.test.js && node .test-build/tests/read-model.test.js && node .test-build/tests/terminal-agent-inventory.test.js && node .test-build/tests/dashboard-parity.test.js && node .test-build/tests/read-client.test.js && node -r ./tests/helpers/expo-crypto-shim.cjs .test-build/tests/direct-transport.test.js && node .test-build/tests/pairing-store.test.js && node .test-build/tests/live-session.test.js && node -r ./tests/helpers/expo-crypto-shim.cjs .test-build/tests/app-live-session.test.js && node .test-build/tests/secure-store.test.js && node .test-build/tests/live-status.test.js && node .test-build/tests/live-view.test.js && node .test-build/tests/lifecycle.test.js && node .test-build/tests/scan-gate.test.js && node tests/uiscene-plugin.test.mjs && node tests/native-deps.test.mjs && node .test-build/tests/action-client.test.js && node .test-build/tests/claude-terminal-state.test.js && node .test-build/tests/claude-terminal-prompt.test.js && node .test-build/tests/claude-terminal-client.test.js && node .test-build/tests/claude-terminal-sequencing.test.js && node .test-build/tests/unowned-terminal.test.js && node .test-build/tests/action-outcomes.test.js && node .test-build/tests/action-lease.test.js && node .test-build/tests/action-journal.test.js && node .test-build/tests/action-restart.test.js && node .test-build/tests/host-dictation.test.js && node .test-build/tests/host-dictation-buffer.test.js && node .test-build/tests/audio-arbiter.test.js && node .test-build/tests/native-microphone-lease.test.js && node .test-build/tests/native-speech.test.js && node .test-build/tests/reply-narration.test.js && node .test-build/tests/voice-reply-observation.test.js && node .test-build/tests/voice-reply-service.test.js && node tests/global-voice-audio-start.test.mjs && node tests/voice-target-lock.test.mjs && node tests/voice-settlement.test.mjs && node tests/voice-home-boundaries.test.mjs && node tests/voice-home-integration.test.mjs && node .test-build/tests/terminal-reply-evidence.test.js && node .test-build/tests/reply-speech-preferences.test.js && node tests/reply-speech-settings.test.mjs && node .test-build/tests/voice-confirmation.test.js && node tests/handsfree-fallback.test.mjs && node tests/confirmation-sheet.test.mjs && node tests/prompt-review-owner.test.mjs && node tests/prompt-result-dismissal.test.mjs && node tests/native-result-dismissal.test.mjs && node .test-build/tests/voice-destination.test.js && node .test-build/tests/scoped-voice-answer.test.js && node .test-build/tests/voice-draft.test.js && node .test-build/tests/native-microphone.test.js && node .test-build/tests/durable-action-store.test.js && node tests/secure-store-commit.test.mjs && node tests/android-cleartext-plugin.test.mjs && node .test-build/tests/structured-requests.test.js && node .test-build/tests/structured-journal.test.js && node .test-build/tests/structured-action-client.test.js && node .test-build/tests/agent-search.test.js && node .test-build/tests/native-async-reply.test.js && node .test-build/tests/native-async-client.test.js && node .test-build/tests/host-default-agent-wire.test.js && node .test-build/tests/host-default-agent-journal.test.js && node .test-build/tests/i18n.test.js && node .test-build/tests/confirmation-context.test.js && node .test-build/tests/deck-model.test.js && node .test-build/tests/frontend-focus.test.js && node .test-build/tests/output-recency.test.js && node tests/recent-key-home.test.mjs && node .test-build/tests/phrase-preferences.test.js && node tests/continue-button.test.mjs && node tests/claude-prompt-sheet.test.mjs && node tests/claude-prompt-home.test.mjs && node tests/phrase-editor.test.mjs && node tests/phrase-home.test.mjs && node .test-build/tests/project-focus.test.js && node .test-build/tests/project-focus-retention.test.js && node tests/project-idle-return.test.mjs && node .test-build/tests/agent-display.test.js && node .test-build/tests/orca-order.test.js && node .test-build/tests/controller-frame.test.js && node .test-build/tests/voice-navigation.test.js && node .test-build/tests/deck-slot-store.test.js && node .test-build/tests/deck-inventory.test.js && node .test-build/tests/deck-layout.test.js && node .test-build/tests/deck-surface-swipe.test.js && node .test-build/tests/ptt-gesture.test.js && node .test-build/tests/confirmation-gesture.test.js && node .test-build/tests/screen-mode.test.js && node .test-build/tests/language-pack.test.js && node .test-build/tests/voice-draft-inbox.test.js && node .test-build/tests/deck-presented-bindings.test.js && node .test-build/tests/deck-native-commands.test.js && node .test-build/tests/host-default-agent-client.test.js && node .test-build/tests/transport-capabilities.test.js && node -r ./tests/helpers/expo-crypto-shim.cjs .test-build/tests/host-release-contracts.test.js && node .test-build/tests/pack-file-bytes.test.js && node .test-build/tests/pack-file-store.test.js && node .test-build/tests/pack-store.test.js && node .test-build/tests/deck-uncertainty.test.js && node .test-build/tests/agent-instruction-draft-store.test.js && node tests/agent-instruction-owner.test.mjs && node tests/deck-sheet-design.test.mjs && node tests/deck-sheet-surfaces.test.mjs list && node tests/deck-sheet-surfaces.test.mjs content && node tests/deck-sheet-surfaces.test.mjs status && node tests/deck-status-design.test.mjs && node tests/deck-settings-design.test.mjs && node tests/deck-sheet-layout.test.mjs && node tests/deck-recording-design.test.mjs && node tests/deck-recording-clock.test.mjs && node tests/deck-image-cache.test.mjs && node tests/deck-review-presentation.test.mjs marks && node tests/deck-review-presentation.test.mjs labels && node tests/deck-review-presentation.test.mjs status && node tests/deck-review-presentation.test.mjs dial && node tests/deck-review-presentation.test.mjs backdrop && node tests/deck-review-presentation.test.mjs recording && node tests/deck-sheet-ptt.test.mjs && node tests/deck-preview-parity-run.test.mjs && node tests/deck-preview-review.test.mjs",
+    "test:prebuild": "node ../../scripts/test-deck-prebuild.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "1.8.0",
+    "@orca/expo-two-way-audio": "file:src/upstream/orca-1.4.245/mobile/packages/expo-two-way-audio",
+    "expo": "^55.0.31",
+    "expo-camera": "55.0.23",
+    "expo-crypto": "55.0.19",
+    "expo-document-picker": "55.0.17",
+    "expo-file-system": "55.0.26",
+    "expo-font": "55.0.8",
+    "expo-image": "55.0.11",
+    "expo-localization": "55.0.19",
+    "expo-router": "^55.0.18",
+    "expo-secure-store": "55.0.18",
+    "expo-sharing": "55.0.25",
+    "expo-status-bar": "^55.0.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "react-native": "^0.83.10",
+    "react-native-safe-area-context": "5.7.0",
+    "react-native-screens": "4.24.0",
+    "tweetnacl": "1.0.3",
+    "zod": "~4.6.7"
+  },
+  "devDependencies": {
+    "@types/react": "~19.2.18",
+    "typescript": "~5.9.2"
+  },
+  "expo": {
+    "autolinking": {
+      "android": {
+        "buildFromSource": [
+          "expo-secure-store"
+        ]
+      }
+    }
+  },
+  "license": "MIT"
+}

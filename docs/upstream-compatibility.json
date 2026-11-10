@@ -1,0 +1,14 @@
+{
+  "profiles": [
+    { "id": "baseline", "lock": "upstream-lock.json", "worktreeList": true },
+    { "id": "installed-release", "lock": "upstream-installed-lock.json", "worktreeList": false }
+  ],
+  "protocolVersion": 3,
+  "minimumVersion": 2,
+  "readProbes": ["status.get", "worktree.ps", "session.tabs.list"],
+  "currentRequests": {
+    "enabled": false,
+    "capability": "agent-session.current-requests.v1",
+    "negotiationMethod": "runtime.clientCapabilities.update"
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "format": 1,
+  "kind": "responsive-primitives",
+  "pxPerPt": 3,
+  "planePt": {
+    "w": 390,
+    "h": 844
+  },
+  "primitives": {
+    "lcdWell": {
+      "contentPt": {
+        "w": 366,
+        "h": 140
+      },
+      "centerPt": {
+        "x": 195,
+        "y": 117
+      },
+      "radiusPt": 14,
+      "paddingPt": 8,
+      "capPt": 17,
+      "shape": "rrect"
+    },
+    "agentWell": {
+      "contentPt": {
+        "w": 110,
+        "h": 104
+      },
+      "centerPt": {
+        "x": 90,
+        "y": 300
+      },
+      "radiusPt": 20,
+      "paddingPt": 8,
+      "capPt": 23,
+      "shape": "rrect"
+    },
+    "commandWell": {
+      "contentPt": {
+        "w": 110,
+        "h": 84
+      },
+      "centerPt": {
+        "x": 290,
+        "y": 300
+      },
+      "radiusPt": 18,
+      "paddingPt": 8,
+      "capPt": 21,
+      "shape": "rrect"
+    },
+    "pttWell": {
+      "contentPt": {
+        "w": 114,
+        "h": 118
+      },
+      "centerPt": {
+        "x": 90,
+        "y": 500
+      },
+      "radiusPt": 24,
+      "paddingPt": 8,
+      "capPt": 27,
+      "shape": "rrect"
+    },
+    "stickRing": {
+      "contentPt": {
+        "w": 112.33333333333333,
+        "h": 112.33333333333333
+      },
+      "centerPt": {
+        "x": 290.1666666666667,
+        "y": 500.1666666666667
+      },
+      "radiusPt": 54,
+      "paddingPt": 8,
+      "shape": "circle"
+    },
+    "dialTicks": {
+      "contentPt": {
+        "w": 112.33333333333333,
+        "h": 112.33333333333333
+      },
+      "centerPt": {
+        "x": 195.16666666666666,
+        "y": 700.1666666666666
+      },
+      "radiusPt": 54,
+      "paddingPt": 8,
+      "shape": "circle"
+    }
+  },
+  "approval": {
+    "compose": {
+      "file": "claudedocs/previews/2026-11-04-fold8/compose.py",
+      "sha256": "3bc91dd52264a3275757651a12e5a99ce3289b7a1a7c644996110e354aacdab4"
+    },
+    "matrix": {
+      "file": "claudedocs/previews/2026-11-04-fold8/responsive-matrix-v3.png",
+      "sha256": "0ef3dc97a4f52580e7c9d479e4c7c5bf666153ed5bfd5a2cef56633cd9e4810b"
+    }
+  },
+  "sourceScene": "docs/deck-design/blender/deck_responsive_primitives.py",
+  "sourceSceneSha256": "8a7d49df22e2a71bf5488de94769a4c5383fe7f62f874367a0c28369cd89e293",
+  "parentScene": "docs/deck-design/blender/deck_scene.py",
+  "parentSceneSha256": "da4e27ade06eb3c3b618c06a7c4e297bbb5b569f0376e89f39af171ec8c8ff2d",
+  "renderer": {
+    "blender": "5.2.1 LTS",
+    "engine": "CYCLES",
+    "device": "GPU",
+    "samples": 128,
+    "pxPerPt": 3,
+    "denoising": true,
+    "viewTransform": "Khronos PBR Neutral",
+    "exposure": -0.10000000149011612,
+    "movingPartObjects": 0,
+    "dialTicks": 32,
+    "stickRings": 1,
+    "lights": [
+      [
+        "key",
+        [
+          -4.5,
+          6,
+          9
+        ],
+        7,
+        2200,
+        [
+          1,
+          0.97,
+          0.94
+        ]
+      ],
+      [
+        "fill",
+        [
+          5,
+          -2.5,
+          8
+        ],
+        9,
+        420,
+        [
+          0.85,
+          0.92,
+          1
+        ]
+      ],
+      [
+        "rim",
+        [
+          0,
+          -7,
+          3
+        ],
+        5,
+        260,
+        [
+          0.9,
+          0.95,
+          1
+        ]
+      ]
+    ]
+  },
+  "files": {
+    "metal-raw.png": {
+      "sha256": "fca98033bf39e3a103fbb18fcca54d14199e4ca65f754d439fd9bae295cb474f",
+      "bytes": 2752632,
+      "px": {
+        "w": 1170,
+        "h": 2532
+      }
+    },
+    "atlas-raw.png": {
+      "sha256": "62d313b5e8ffda8f77d2ad4e505c0360b6f36690d632d63bbc40e912c1d762a3",
+      "bytes": 3021190,
+      "px": {
+        "w": 1170,
+        "h": 2532
+      }
+    }
+  }
+}

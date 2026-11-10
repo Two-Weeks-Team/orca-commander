@@ -1,0 +1,30 @@
+name: Core contract check
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  domain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Verify pinned upstream source integrity
+        run: node scripts/verify-upstream.mjs
+      - name: Test the vendoring and verification tools (temporary git repository)
+        run: node scripts/test-vendor-tools.mjs
+      - name: Install mobile dependencies
+        working-directory: apps/mobile
+        run: npm ci --no-audit --no-fund --ignore-scripts
+      - name: Compile and run domain policy checks
+        working-directory: apps/mobile
+        run: npm run test:domain
+      - name: Check application TypeScript
+        working-directory: apps/mobile
+        run: npm run typecheck
+      - name: Expo prebuild (iOS) emits UIScene adoption and the Podfile Ruby guard
+        working-directory: apps/mobile
+        run: npm run test:prebuild

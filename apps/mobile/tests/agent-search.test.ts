@@ -1,0 +1,25 @@
+import * as model from '../src/ui/decision-card-model';
+import {normalizeWorktreePs} from '../src/adapters/orca-read-model';
+import type {AgentSnapshot} from '../src/core/types';
+let n=0;const check=(v:unknown,m:string)=>{n++;if(!v)throw new Error(m);};
+type Filter=(agents:readonly AgentSnapshot[],query:string,scope?:'all'|'attention'|'working'|'done'|'unknown')=>AgentSnapshot[];
+const filter=(model as unknown as {filterAgents?:Filter}).filterAgents;
+const base:AgentSnapshot={id:'exact-1',provider:'codex',title:'한글 원문 /Users/owner/A B',summary:'owner@example.test full original summary',state:'question',eventType:'user_question',target:{hostId:'own-host',worktreeId:'worktree:/full/project',terminalId:'pane:one'},updatedAt:'2026-11-03T00:00:00Z'};
+const other:AgentSnapshot={...base,id:'exact-2',provider:'claude',state:'done',eventType:'informational',target:{...base.target,terminalId:'pane:two'}};
+const stale:AgentSnapshot={...base,id:'exact-3',state:'done',eventType:'user_question'};
+const agents=[base,other,stale];
+check(filter?.(agents,'CLAUDE')[0]===other,'provider search selects original exact object without title identity');
+check(filter?.(agents,'한글 /full/project').length===3,'all literal terms match Unicode and full target paths');
+check(filter?.(agents,'owner@example.test')[0]===base,'owner email is searchable without display redaction');
+check(filter?.(agents,'ＰＲＯＪＥＣＴ').length===3,'search folds compatible Unicode without mutating content');
+check(filter?.(agents,'[regex]').length===0,'query is literal and never a regular expression');
+check(filter?.(agents,'','attention').map(a=>a.id).join(',')==='exact-1','attention filter requires matching state and event, never old questions');
+check(filter?.(agents,'','done').length===2,'state scope includes matching completed rows');
+check(filter?.(agents,'','working').length===0,'empty filtered list remains empty');
+check(filter?.(agents,'   ').length===3&&base.title.includes('/Users/owner/A B')&&agents[0]===base,'blank query preserves order and complete original owner fields');
+const fullTitle='원래 제목 '+ 'T'.repeat(150)+' TITLE_TAIL';
+const fullSummary='원래 요약 '+ 'S'.repeat(700)+' SUMMARY_TAIL';
+const live=normalizeWorktreePs({truncated:false,totalCount:1,worktrees:[{worktreeId:'owned-worktree',displayName:'Owned',hostId:'local',agents:[{paneKey:'owned-pane',agentType:'codex',state:'waiting',taskTitle:fullTitle,lastAssistantMessage:fullSummary,updatedAt:1793660000000}]}]},{hostId:'own-host',generation:1,observedAt:1793660000000});
+check(live.ok&&filter?.(live.agents,'TITLE_TAIL SUMMARY_TAIL').length===1,'normalizer-to-search keeps original owner text beyond former title/summary caps');
+if(live.ok){const card=model.buildDecisionCard(live.agents[0],true,1793660000000);check(card.title===fullTitle&&card.summary===fullSummary&&card.summary.length>600,'actual live card receives complete original fields and can disclose a long summary');}
+console.log(`PASS: ${n} local agent search assertions (no network or target mutation)`);

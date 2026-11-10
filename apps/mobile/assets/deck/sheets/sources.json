@@ -1,0 +1,33 @@
+{
+  "recipe": "D30 v3 command nine-slice54px, dial circle crop91,90,246,245, original DeckRecording microphone vector recolored gray and sips rasterized3x",
+  "sources": {
+    "apps/mobile/assets/deck/sprites/cmd_up.png": "9888a7d474033f6514dce25f06cff5e08a8432de8844bd05e11acdd83c74fc76",
+    "apps/mobile/assets/deck/sprites/cmd_pressed.png": "f3403dcf997dd4d7b002b8014a4030f3427e3de759efb0fb506a7ba70daa93c3",
+    "docs/deck-design/renders/sprites_raw/dial.png": "f234c4e6317aeb2bea1807b151bf3e8abb6c54efff457e2605e511c20aa74fab",
+    "docs/deck-design/renders/responsive-primitives/metal-raw.png": "fca98033bf39e3a103fbb18fcca54d14199e4ca65f754d439fd9bae295cb474f",
+    "docs/deck-design/canvas-source/DeckRecording.dc.html": "1933123a6bc118df097ccd3f188440ae8871c977c5d44a5905357efea1eb3fd2"
+  },
+  "files": {
+    "cmd_up-00.png": "827030ce0e4c771876a3c6097dbff8aedf14705b5d944f8c773e595927c3b91a",
+    "cmd_up-01.png": "c32837b22b627aa66b135b59310c7c18570482ad9bfd2c55713382a10d88718f",
+    "cmd_up-02.png": "4b53245a6814f0de6f2488ed795ed22d361902575478511f8498fd54f2fc7fb1",
+    "cmd_up-10.png": "9711ab3c52f9eb7fc5ede4ce791d7006b7107fb9b11da453f9abf28a324aef62",
+    "cmd_up-11.png": "7b8bca663cd31429155143f02179489425fe93a4f7283108bd995eb888a7bd47",
+    "cmd_up-12.png": "37836adbbbcf2e43681c31284d6e46a0cdfc14623fcc52d4c697da22280ee484",
+    "cmd_up-20.png": "8c9874aacc75beb5a4200f1d48c1ea5ff2f4225bc98312650dfa601874c99be2",
+    "cmd_up-21.png": "0f34a89029a6c63f7fe8017120c7875b2d15f6f707cfa867594b36b25e3cef59",
+    "cmd_up-22.png": "14bde50354316dac4a6a0ab05174ee45f160d714c3007334d0e9ac9cdddf48d8",
+    "cmd_pressed-00.png": "5e7eb38f05288d3b7664ccbbc9743f758525770f03b13a8e806ae8a913a98a35",
+    "cmd_pressed-01.png": "6bfa74e6ef1cd53ef656960a304365fa777d4eb4c2b95aaf063042cfc98eb074",
+    "cmd_pressed-02.png": "5ebb90c37bb343bc3b5ff9cca023fc584cb9c36812cc9cbb40cea6033cf8e139",
+    "cmd_pressed-10.png": "e3ff2a0e6960b0ae4524c94d63967692a93d54d8fcba37e21ea5a99ba11c72b5",
+    "cmd_pressed-11.png": "1dbac5a40106de587643140a27e4f11996e09ba9918e9184fb53acf787eba0db",
+    "cmd_pressed-12.png": "77b26a5d1835deff92c9346b2fc2100ac8016df85047212f7fa6d40f2f00a470",
+    "cmd_pressed-20.png": "60d88da5904c84e261327c658ffae37043e8ecbf4d9a96a71da90a3580e0c820",
+    "cmd_pressed-21.png": "41bfd4ac125308aaebc572b7d3ba946fc65bb6db075b70020566441307ebe0eb",
+    "cmd_pressed-22.png": "25dd9d6a9397809bf423d5d629981b07c68dc227a53e0e65bb885916848d1289",
+    "knob.png": "fa6119902560eefbfc64f05a701f7ba4817814906364c837ddc6b4af1492b467",
+    "metal.png": "fca98033bf39e3a103fbb18fcca54d14199e4ca65f754d439fd9bae295cb474f",
+    "mic.png": "912d2e10f152737a091675a22422347dc7f43c1ba3fdd062736b1c3f501bb6eb"
+  }
+}

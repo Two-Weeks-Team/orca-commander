@@ -1,0 +1,18 @@
+import {strict as assert} from 'node:assert';
+import {overallUnresolvedCount} from '../src/ui/deck/uncertainty';
+import type {HostDefaultAgentState} from '../src/adapters/host-default-agent-client';
+import type {HostDefaultLaunchReceipt} from '../src/adapters/host-default-agent-journal';
+const receipt=(status:HostDefaultLaunchReceipt['status'],acknowledged=false):HostDefaultLaunchReceipt=>({operationId:'1793700000000-'+'1'.repeat(32),hostId:'owned-test-host',hostVersion:'1.4.246',worktreeId:'owned-test-worktree',agent:'codex',at:1793700000000,status,acknowledged,sessionId:status==='journaled'?'codex_owned-fixture':null,messageId:status==='journaled'?'owned-message':null});
+const state=(receipts:readonly HostDefaultLaunchReceipt[]=[],journal:HostDefaultAgentState['journal']='ready'):HostDefaultAgentState=>({journal,receipts,busy:false});
+assert.equal(overallUnresolvedCount(0,state([receipt('unknown')])),1,'an uncertain new session must not leave the global counter at zero');
+assert.equal(overallUnresolvedCount(2,state([receipt('unknown'),receipt('unknown')])),4);
+assert.equal(overallUnresolvedCount(2,state([receipt('unknown',true)])),2,'explicitly checked unknowns remain in history but leave the counter');
+assert.equal(overallUnresolvedCount(1,state([receipt('journaled'),receipt('changed'),receipt('refused')])),1);
+assert.equal(overallUnresolvedCount(0,state()),0);
+assert.equal(overallUnresolvedCount(null,state()),null);
+assert.equal(overallUnresolvedCount(0,state([],'loading')),null);
+assert.equal(overallUnresolvedCount(0,state([],'unavailable')),null);
+assert.equal(overallUnresolvedCount(-1,state()),null);
+assert.equal(overallUnresolvedCount(NaN,state()),null);
+const unknown=Object.freeze(receipt('unknown')),before=JSON.stringify(unknown);overallUnresolvedCount(0,state([unknown]));assert.equal(JSON.stringify(unknown),before);
+console.log('PASS: 11 global uncertainty count assertions (synthetic journals; no action authority or host)');

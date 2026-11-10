@@ -1,0 +1,82 @@
+name: Pinned upstream compatibility
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  upstream:
+    strategy:
+      fail-fast: false
+      matrix:
+        commit:
+          - 7e935c596129ff9bed35a4eaebd1b0a5668a2b98
+          - 1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path: deck
+      - uses: actions/checkout@v4
+        with:
+          repository: stablyai/orca
+          ref: ${{ matrix.commit }}
+          path: upstream
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+          run_install: false
+      - name: Install pinned upstream mobile dependencies without lifecycle scripts
+        working-directory: upstream/mobile
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Install original root dependencies and build workspace packages
+        working-directory: upstream
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts
+          pnpm run build:packages
+      - name: Generate original Mobile assets and check the full application
+        working-directory: upstream/mobile
+        run: |
+          node scripts/build-terminal-webview-engine.mjs
+          node scripts/build-mermaid-page-engine.mjs
+          node scripts/build-terminal-document-script.mjs
+          pnpm exec tsc --noEmit
+      - name: Original structured agent-session wire contracts
+        working-directory: upstream
+        env:
+          ORCA_BACKGROUND_LAUNCH: '1'
+        run: pnpm exec vitest run src/main/runtime/rpc/methods/structured-agent-session-wire-contracts.test.ts --maxWorkers=2
+      - name: Direct currentRequests handler and state regressions (synthetic host)
+        run: node deck/scripts/test-upstream-current-requests.mjs upstream --negative-control
+      - name: Upstream protocol and E2EE tests (Node native adapters)
+        working-directory: upstream/mobile
+        env:
+          ORCA_BACKGROUND_LAUNCH: '1'
+        run: pnpm exec vitest run src/transport/protocol-compat.test.ts src/transport/pairing.test.ts src/transport/mobile-e2ee-legacy-fixtures.test.ts src/transport/mobile-e2ee-v2-client-session.test.ts src/transport/mobile-e2ee-v2-key-schedule.test.ts src/transport/rpc-client-direct-e2ee-v2.test.ts src/transport/mobile-relay-e2ee-link.test.ts src/transport/mobile-runtime-capability-negotiation.test.ts src/transport/rpc-client-capabilities.test.ts --maxWorkers=2
+      - name: Verify original source, schemas and advertised capabilities
+        run: node --import ./upstream/mobile/node_modules/tsx/dist/loader.mjs deck/scripts/verify-upstream-compat.mjs upstream
+      - name: Original upstream mock encrypted round trip
+        run: node --import ./upstream/mobile/node_modules/tsx/dist/loader.mjs deck/scripts/test-upstream-mock.mjs upstream
+      - name: Compile Deck domain code for the read-client harness
+        working-directory: deck/apps/mobile
+        run: |
+          npm ci --no-audit --no-fund --ignore-scripts
+          npx tsc -p tsconfig.domain.json
+      - name: Deck read-only client over the original mock (encrypted, synthetic host)
+        run: node --import ./upstream/mobile/node_modules/tsx/dist/loader.mjs deck/scripts/test-deck-read-client.mjs upstream
+      - name: Original native prompt receipt and provider audience contracts (installed pin)
+        if: matrix.commit == '1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3'
+        working-directory: upstream
+        env:
+          ORCA_BACKGROUND_LAUNCH: '1'
+        run: pnpm exec vitest run src/main/native-chat/agent-session-wire/structured-agent-session-prompt-answer-receipts.test.ts src/main/runtime/rpc/methods/session-tab-agent-status-projection.test.ts src/main/runtime/rpc/methods/structured-agent-session-policy.test.ts --maxWorkers=2
+      - name: Deck structured wire fingerprints match the original helper (installed pin)
+        if: matrix.commit == '1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3'
+        run: node --import ./upstream/mobile/node_modules/tsx/dist/loader.mjs deck/scripts/test-deck-structured-fingerprint.mjs upstream
+      - name: Deck direct transport over the original desktop E2EE channel (loopback, synthetic)
+        run: node --import ./upstream/mobile/node_modules/tsx/dist/loader.mjs deck/scripts/test-deck-transport.mjs upstream

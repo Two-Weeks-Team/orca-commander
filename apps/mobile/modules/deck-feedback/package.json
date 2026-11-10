@@ -1,0 +1,13 @@
+{
+  "name": "deck-feedback",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Session-independent local deck click feedback",
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "peerDependencies": {
+    "expo": "*",
+    "expo-modules-core": "*"
+  }
+}

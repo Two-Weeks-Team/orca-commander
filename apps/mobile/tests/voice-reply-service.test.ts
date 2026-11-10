@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import {createVoiceReplyService,waitForAudioIdle,type VoiceReplyBinding} from '../src/adapters/voice-reply-service';
+import {createAudioArbiter} from '../src/adapters/audio-arbiter';
+import type {NativeSpeech,SpeechResult} from '../src/adapters/native-speech';
+import type {TerminalReplyEvidence} from '../src/adapters/terminal-reply-evidence';
+let now=1000,enabled=true,foreground=true,current=true,reads=0;const spoken:string[]=[];let finish:((value:SpeechResult)=>void)|undefined;
+const binding:VoiceReplyBinding={id:'receipt',hostId:'host',generation:1,worktreeId:'wt',paneKey:'tab:leaf',handle:'term',incarnationId:'inc',title:'Tab',place:'Project'};
+let reply:TerminalReplyEvidence={target:{worktreeId:'wt',paneKey:'tab:leaf',handle:'term',incarnationId:'inc'},publication:{epoch:'e',version:1},state:'done',stateStartedAt:100,updatedAt:100,turnEndedAt:100,turnEndDisposition:'identified',body:'Old',knownToolOutput:false,interrupted:false,sessionBoundary:false};
+const audio=createAudioArbiter();
+const speech:NativeSpeech={speak:async(text)=>{spoken.push(text);return 'finished';},cancel:()=>{},getSnapshot:()=>({phase:'idle'}),subscribe:()=>()=>{}};
+const options={speech,audio,read:async()=>{reads++;return{reply,issuedAt:now,epochChanged:false};},preferences:()=>({phase:'ready' as const,error:false,enabled,rate:1}),now:()=>now,foreground:()=>foreground,isCurrent:()=>current,language:()=>'ko-KR' as const,intro:()=> 'Tab response',remainder:()=> 'More on screen',waitingNotice:()=> 'Use the existing reply gate'};
+const settle=async()=>{for(let i=0;i<8;i++)await Promise.resolve();};
+async function main(){
+ const service=createVoiceReplyService(options),accepted=await service.capture(binding);assert.ok(accepted,'voice response observation captures its original pre-send baseline');
+ reply={...reply,publication:{epoch:'e',version:2},stateStartedAt:200,updatedAt:200,turnEndedAt:200,body:'New reply'};
+ await service.tick();assert.equal(spoken.length,0,'capturing alone is not an accepted request');
+ assert.equal(accepted(),true,'only an actually armed observer can promise reply playback');assert.equal(accepted(),false,'a duplicate activation is not a newly armed observer');await service.tick();await settle();assert.deepEqual(spoken,['Tab response','New reply'],'one accepted closure registers one narration');
+ await service.tick();await settle();assert.equal(spoken.length,2,'the same response is not repeated');
+ enabled=false;const count=reads;assert.equal(await service.capture({...binding,id:'disabled'}),undefined);assert.equal(reads,count,'disabled response speech reads no host content');enabled=true;
+ const later=await service.capture({...binding,id:'late'});assert.ok(later);later();now+=40_000;
+ reply={...reply,stateStartedAt:300,updatedAt:300,turnEndedAt:300,body:'Later reply'};
+ await service.tick();await settle();assert.equal(spoken.at(-1),'Later reply','the historical baseline may age while a fresh follow-up read arrives');
+ const canceled=await service.capture({...binding,id:'cancel'});assert.ok(canceled);canceled();reply={...reply,stateStartedAt:400,updatedAt:400,turnEndedAt:400,body:'Canceled response'};
+ speech.speak=text=>{spoken.push(text);return new Promise(resolve=>{finish=resolve;});};await service.tick();await Promise.resolve();
+ service.cancel();finish!('finished');await settle();assert.equal(spoken.includes('Canceled response'),false,'cancel during the intro never speaks the body');
+ const background=await service.capture({...binding,id:'background'});assert.ok(background);foreground=false;assert.equal(background(),false,'background activation cannot promise reply playback');foreground=true;const before=reads;await service.tick();assert.equal(reads,before,'a closure accepted in the background does not arm later autoplay');
+ const disabledAfterPrepare=await service.capture({...binding,id:'disabled-after-prepare'});assert.ok(disabledAfterPrepare);enabled=false;assert.equal(disabledAfterPrepare(),false,'a prepared closure is not proof after reply reading was disabled');enabled=true;
+ const workingService=createVoiceReplyService({...options,read:async()=>({reply:{...reply,state:'working'},issuedAt:now,epochChanged:false})});
+ assert.equal(await workingService.capture({...binding,id:'existing-working'}),undefined,'a prior working turn cannot be narrated as this request response');workingService.dispose();
+ const lateCapture=service.capture({...binding,id:'late-capture'});service.cancel();assert.equal(await lateCapture,undefined,'cancel fences an in-flight baseline even if settings or foreground later return');
+ service.dispose();
+ const lease=audio.acquire('speech')!;assert.equal(await waitForAudioIdle(audio,()=>true,5),false);assert.equal(audio.getSnapshot().kind,'speech','timeout cannot free a speech lease');
+ const waiting=waitForAudioIdle(audio,()=>true,100);audio.release(lease);assert.equal(await waiting,true);assert.equal(await waitForAudioIdle(audio,()=>false,5),false);
+ console.log('PASS: accepted-only exact voice reply lifecycle, baseline aging, cancellation/background and confirmed audio release (synthetic ports)');
+}
+void main();

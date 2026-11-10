@@ -1,0 +1,77 @@
+{
+  "expo": {
+    "name": "Orca Deck",
+    "slug": "orca-deck",
+    "scheme": "orcadeck",
+    "version": "0.0.1",
+    "orientation": "default",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/branding/orca-deck-logo.png",
+    "splash": {
+      "image": "./assets/branding/orca-deck-logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "newArchEnabled": true,
+    "plugins": [
+      "expo-router",
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/BarlowCondensed-Bold.ttf"
+          ]
+        }
+      ],
+      "./plugins/with-ios-uiscene.js",
+      "./plugins/with-android-secure-store-commit.js",
+      "./plugins/with-android-cleartext-transport.js",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Deck uses the camera only to scan the pairing QR shown by Orca desktop. Video is not saved or sent.",
+          "microphonePermission": "Deck uses the microphone when you start voice input. Your paired Orca host transcribes audio with its selected model. You can edit the draft before sending.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-localization",
+        {
+          "supportedLocales": [
+            "en",
+            "ko"
+          ],
+          "allowDynamicLocaleChangesAndroid": true
+        }
+      ]
+    ],
+    "ios": {
+      "icon": "./assets/branding/icon-ios.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "io.github.two-weeks-team.orcadeck",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Orca Deck connects to your paired Orca desktop to read work state and send confirmed input and voice requests.",
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        },
+        "NSMicrophoneUsageDescription": "Deck uses the microphone when you start voice input. Your paired Orca host transcribes audio with its selected model. You can edit the draft before sending.",
+        "CFBundleAllowMixedLocalizations": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/branding/icon-android-foreground.png",
+        "backgroundColor": "#000000"
+      },
+      "package": "io.github.twoweeksteam.orcadeck",
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "locales": {
+      "en": "./locales/en.json",
+      "ko": "./locales/ko.json"
+    }
+  }
+}

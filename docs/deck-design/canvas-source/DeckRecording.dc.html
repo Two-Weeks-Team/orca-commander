@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>덱 — 말하는 중</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&amp;family=Noto+Sans+KR:wght@400;500;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+button{font-family:inherit;cursor:pointer;background:transparent;border:none;padding:0;margin:0}
+.root{position:relative;width:390px;height:844px;overflow:hidden;background:#0A0D12;font-family:'Noto Sans KR',system-ui,sans-serif;color:#F4F7FB}
+.bg{position:absolute;left:0;top:0;width:390px;height:844px}
+.lcd{position:absolute;left:16px;top:52px;width:358px;height:130px;box-sizing:border-box;padding:12px 18px;display:flex;flex-direction:column;justify-content:space-between;text-align:left;color:#A6F5D8}
+.r{display:flex;align-items:center;width:100%}
+.nm{font-family:'Barlow Condensed',sans-serif;font-weight:700}
+.k{position:absolute;width:110px;height:104px;box-sizing:border-box;padding:10px 12px;display:flex;flex-direction:column;justify-content:space-between;text-align:left}
+.kt{display:flex;justify-content:space-between;align-items:flex-start;width:100%}
+.kb{display:flex;justify-content:space-between;align-items:flex-end;width:100%}
+.ki{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:34px;line-height:34px}
+.kp{font-size:11px;font-weight:800;letter-spacing:0.08em}
+.ka{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:27px;line-height:25px}
+.sel{border-radius:20px;box-shadow:0 0 0 3px #F4F7FB, 0 0 22px rgba(244,247,251,0.45)}
+.c{position:absolute;width:110px;height:84px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:15px;font-weight:800}
+.dim{color:#5D6775}
+.am{color:#2B1800}.vi{color:#1F1546}.bl{color:#08224D}.gr{color:#062E19}
+.bar{display:inline-block;width:4px;border-radius:2px;background:#8BE8AE}
+</style>
+</helmet>
+<div class="root">
+
+<img class="bg" src="/_blob/d1a4fd20171b1c424c21fc33625aca62" alt="Orca Deck 본체, 말하는 키 눌림">
+
+<button class="lcd" aria-label="녹음 중 0분 7초, 호스트 로컬 전사">
+<div class="r" style="justify-content:space-between;align-items:baseline">
+<span style="font-size:22px;font-weight:800;color:#E6FFF6;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:250px">sample-app</span>
+<span class="nm" style="font-size:34px;line-height:34px;color:#E6FFF6">2<span style="font-size:21px;color:#86CDB4">/3</span></span>
+</div>
+<div class="r" style="gap:10px">
+<span style="width:12px;height:12px;border-radius:6px;background:#FF5C6C;box-shadow:0 0 10px #FF5C6C"></span>
+<span class="nm" style="font-size:22px;letter-spacing:0.08em;color:#FFB3BC">REC</span>
+<span class="nm" style="font-size:25px;line-height:25px;color:#E6FFF6">0:07</span>
+<span style="height:20px;padding:0 8px;border-radius:10px;border:1px solid #5FBF9A;color:#A6F5D8;font-size:11px;font-weight:800;display:inline-flex;align-items:center;letter-spacing:0.06em">LOCAL</span>
+<span style="margin-left:auto;display:inline-flex;align-items:center;gap:3px;height:26px"><span class="bar" style="height:8px"></span><span class="bar" style="height:14px"></span><span class="bar" style="height:22px"></span><span class="bar" style="height:12px"></span><span class="bar" style="height:26px"></span><span class="bar" style="height:18px"></span><span class="bar" style="height:10px"></span><span class="bar" style="height:16px"></span></span>
+</div>
+<div class="r" style="justify-content:space-between;border-top:1px solid rgba(166,245,216,0.22);padding-top:8px">
+<div class="nm r" style="width:auto;gap:16px;font-size:25px;line-height:25px"><span style="color:#FFC24D">▲3</span><span style="color:#7CC0FF">●7</span><span style="color:#74E0A0">✓12</span><span style="color:#A9B6C6">?0</span></div>
+<div class="r" style="width:auto;gap:6px"><span style="width:9px;height:9px;border-radius:5px;background:#5FD38D;box-shadow:0 0 8px #5FD38D"></span><span class="nm" style="font-size:19px;color:#8BE8AE;letter-spacing:0.06em">LIVE</span><span class="nm" style="font-size:19px;font-weight:600;color:#E6FFF6">2s</span></div>
+</div>
+</button>
+
+<button class="k am" style="left:17px;top:202px" aria-label="1번 CODEX 승인 요청 12초">
+<div class="kt"><span class="ki">1</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5l9 16H3z"/><line x1="12" y1="10" x2="12" y2="14.5"/><circle cx="12" cy="17.2" r="0.5"/></svg></div>
+<div class="kb"><span class="kp">CODEX</span><span class="ka">12s</span></div>
+</button>
+<button class="k vi sel" style="left:140px;top:202px" aria-label="2번 CLAUDE 결과 검토 38초, 선택됨, 이 항목으로 말하는 중">
+<div class="kt"><span class="ki">2</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z"/><circle cx="12" cy="12" r="3"/></svg></div>
+<div class="kb"><span class="kp">CLAUDE</span><span class="ka">38s</span></div>
+</button>
+<button class="k am" style="left:263px;top:202px" aria-label="3번 CODEX 질문 1분">
+<div class="kt"><span class="ki">3</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-0.7 0.4-1 0.9-1 1.7"/><circle cx="12" cy="17" r="0.6"/></svg></div>
+<div class="kb"><span class="kp">CODEX</span><span class="ka">1m</span></div>
+</button>
+<button class="k bl" style="left:17px;top:322px" aria-label="4번 CLAUDE 진행 중 2분">
+<div class="kt"><span class="ki">4</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.5-5.8"/><polyline points="20 4 20 8.5 15.5 8.5"/></svg></div>
+<div class="kb"><span class="kp">CLAUDE</span><span class="ka">2m</span></div>
+</button>
+<button class="k bl" style="left:140px;top:322px" aria-label="5번 CODEX 진행 중 5분">
+<div class="kt"><span class="ki">5</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12a8 8 0 1 1-2.5-5.8"/><polyline points="20 4 20 8.5 15.5 8.5"/></svg></div>
+<div class="kb"><span class="kp">CODEX</span><span class="ka">5m</span></div>
+</button>
+<button class="k gr" style="left:263px;top:322px" aria-label="6번 CLAUDE 완료 9분">
+<div class="kt"><span class="ki">6</span><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="8 12.5 11 15.5 16.5 9"/></svg></div>
+<div class="kb"><span class="kp">CLAUDE</span><span class="ka">9m</span></div>
+</button>
+
+<div style="position:absolute;left:22px;top:436px;width:346px;height:24px;display:flex;justify-content:space-between;align-items:center">
+<span class="nm" style="font-size:21px;color:#F4F7FB">1–6<span style="color:#9AA6B5;font-weight:600"> / 22</span></span>
+<div style="display:flex;gap:7px;align-items:center"><span style="width:9px;height:9px;border-radius:5px;background:#F4F7FB;box-shadow:0 0 6px rgba(244,247,251,0.6)"></span><span style="width:9px;height:9px;border-radius:5px;background:#3A4656"></span><span style="width:9px;height:9px;border-radius:5px;background:#3A4656"></span><span style="width:9px;height:9px;border-radius:5px;background:#3A4656"></span></div>
+</div>
+
+<button class="c dim" disabled style="left:17px;top:474px" aria-label="허용, 녹음 중"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="5 12.5 10 17.5 19 7.5"/></svg><span>허용</span></button>
+<button class="c dim" disabled style="left:140px;top:474px" aria-label="거부, 녹음 중"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg><span>거부</span></button>
+<button class="c dim" disabled style="left:263px;top:474px" aria-label="내용, 녹음 중"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.5h7l4 4V20.5H7z"/><line x1="9.5" y1="12" x2="15.5" y2="12"/><line x1="9.5" y1="15.5" x2="15.5" y2="15.5"/></svg><span>내용</span></button>
+<button class="c dim" disabled style="left:17px;top:574px" aria-label="입력, 녹음 중"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20l1.2-4.2L16.5 4.5l3 3L8.2 18.8z"/></svg><span>입력</span></button>
+<button class="c dim" disabled style="left:140px;top:574px" aria-label="다음 판단, 녹음 중"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 7 11 12 6 17"/><polyline points="13 7 18 12 13 17"/></svg><span>다음 판단</span></button>
+<button class="c dim" disabled style="left:263px;top:574px" aria-label="목록, 녹음 중"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="7" x2="20" y2="7"/><line x1="8" y1="12" x2="20" y2="12"/><line x1="8" y1="17" x2="20" y2="17"/><circle cx="4.5" cy="7" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="17" r="1"/></svg><span>목록</span></button>
+
+<button aria-label="이동 조이스틱" style="position:absolute;left:18px;top:690px;width:104px;height:104px;color:#6F7A88">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:45px;top:6px"><polyline points="6 15 12 9 18 15"/></svg>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:45px;top:84px"><polyline points="6 9 12 15 18 9"/></svg>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:6px;top:45px"><polyline points="15 6 9 12 15 18"/></svg>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="position:absolute;left:84px;top:45px"><polyline points="9 6 15 12 9 18"/></svg>
+</button>
+<div style="position:absolute;left:140px;top:685px;width:110px;height:114px;box-sizing:border-box;border-radius:26px;box-shadow:0 0 0 3px rgba(255,92,108,0.85), 0 0 30px rgba(255,92,108,0.65);pointer-events:none"></div>
+<button aria-label="말하는 중. 놓으면 멈춤" style="position:absolute;left:144px;top:689px;width:102px;height:106px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;color:#0D1117;font-size:13px;font-weight:800">
+<svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#D6243A" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="#D6243A"/><path d="M5.5 11.5a6.5 6.5 0 0 0 13 0"/><line x1="12" y1="18" x2="12" y2="21.5"/></svg><span class="nm" style="font-size:22px;line-height:22px;color:#0D1117">0:07</span>
+</button>
+<button aria-label="회전 다이얼" style="position:absolute;left:268px;top:690px;width:104px;height:104px;color:#10141A">
+<span class="nm" style="position:absolute;left:29px;top:29px;width:46px;height:46px;display:flex;align-items:center;justify-content:center;font-size:25px;line-height:25px">2<span style="font-size:15px;color:#3B4452">/3</span></span>
+</button>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

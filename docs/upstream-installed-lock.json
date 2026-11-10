@@ -1,0 +1,249 @@
+{
+  "repository": "https://github.com/stablyai/orca",
+  "commit": "1c6ac8c3c4d2c3dec2cb5966d225ca2a0e0471d3",
+  "desktopVersion": "1.4.245",
+  "mobileVersion": "0.0.1",
+  "vendorRoot": "apps/mobile/src/upstream/orca-1.4.245",
+  "files": [
+    {
+      "path": "mobile/src/transport/protocol-version.ts",
+      "sha256": "ef98d1c1a2a64e9433e8d0c62476a10615bf30b4e6709e411b425c095adc5262"
+    },
+    {
+      "path": "mobile/src/transport/protocol-compat.ts",
+      "sha256": "38c78674fcd3a58bf2b3d7a4313320f43d8cfa581bfcd8f7ac380058bcbb7966"
+    },
+    {
+      "path": "mobile/src/transport/mobile-relay-connect-url.ts",
+      "sha256": "6ae66834eec0c9d5af828df36fa525db650332ef3b77c3a419f9659f0666f1a7"
+    },
+    {
+      "path": "mobile/src/transport/base64-byte-codec.ts",
+      "sha256": "76f077b24e3c0cc20ae63441326541aa2cb11966ffe3eacce5f9c6ff6e916570"
+    },
+    {
+      "path": "src/shared/mobile-pairing-base64.ts",
+      "sha256": "0259c2d7d14112d3bfbbef77c73829ef3f143f7196aa30dc870494edea8155b8"
+    },
+    {
+      "path": "src/shared/mobile-pairing-protocol-limits.ts",
+      "sha256": "c42b2db0fa40439b20d89b5cb347632c8cb2790d410385646d45c127938c80e8"
+    },
+    {
+      "path": "src/shared/mobile-relay-pairing-offer.ts",
+      "sha256": "936722ef1505ea5f2f4e4f33aa99434418470e966efdc501ea8eb7dcdd6679d5"
+    },
+    {
+      "path": "src/shared/runtime-host-descriptor.ts",
+      "sha256": "c73fcd96a79e51f304a5457aa40ba6f369bace78c40b852195512912a4a685f1"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-method-allowlist.ts",
+      "sha256": "262e17c7aba9deb3683625b952934073a37b66577d6137e58e082c6f5f376f5b"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-method-routing.ts",
+      "sha256": "9772c87acf6a357459589b0e280911e981839f77f40495ad6185e3926a5f7b89"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-agent-session-methods.ts",
+      "sha256": "9cda3c282607b45c61bd3f16179b7a9d400750d548a1904ee6e706ef0cb1dd56"
+    },
+    {
+      "path": "src/main/runtime/runtime-rpc/runtime-rpc-mobile-paired-desktop-methods.ts",
+      "sha256": "b831ed348dfff4d5527996a023b2834baa86865b29575879edf84f98ce61144a"
+    },
+    {
+      "path": "src/shared/sidebar-inputs-switch.ts",
+      "sha256": "9ceba8842129f34d95c129575ca75de82fc3a1ba216bf9cb990a1951a3ec2350"
+    },
+    {
+      "path": "mobile/src/transport/direct-socket-framing.ts",
+      "sha256": "aafc00f4537e23e992a50ae5814cc389be8fb0ff4d6e1ebf748d5d5e3bb1dd8e"
+    },
+    {
+      "path": "mobile/src/transport/e2ee.ts",
+      "sha256": "44280bd116c3cc397450615f4f62b12be8f4f33a94281a86b10a506320236ed6"
+    },
+    {
+      "path": "mobile/src/transport/mobile-e2ee-v2-client-session.ts",
+      "sha256": "67e0a58e7330ece1beceb021e2a6538880454c1956701bd1496a572a385e3a6d"
+    },
+    {
+      "path": "mobile/src/transport/mobile-e2ee-v2-physical-channel.ts",
+      "sha256": "bd842cae4be0627e9f0eedce6e9fed44f3a3a97c6a83a282ff90177e3d6719c3"
+    },
+    {
+      "path": "mobile/src/transport/mobile-paired-e2ee-primitives.ts",
+      "sha256": "2e6568314de9de1d1bd2cb9d5734d0e57558fd2bfbcb7c2a1960dcb134654e82"
+    },
+    {
+      "path": "mobile/src/transport/mobile-runtime-host-platform.ts",
+      "sha256": "88e4bed736b07a75353e566199716b6ccea28caaca75530eaa70dfec2ff58806"
+    },
+    {
+      "path": "mobile/src/transport/paired-e2ee-native-codec.ts",
+      "sha256": "2409ddf1e6b9fd09f27613a3f9e7390e85634f28c5804201cfc342445befa41b"
+    },
+    {
+      "path": "mobile/src/transport/rpc-envelope-fields.ts",
+      "sha256": "9213eea617b2e7c0068bbd8e534ac76b5ea6bc0e2ca2e40adda6ff869e393261"
+    },
+    {
+      "path": "mobile/src/transport/types.ts",
+      "sha256": "8a0ee5c3c6ce527fe951ada38c8183878cdb6707d0e3a694cc47748ce4c6952e"
+    },
+    {
+      "path": "mobile/src/transport/websocket-payload-bytes.ts",
+      "sha256": "579f86cc2c5ee64f3bbb651ff1781c888ac3d64e5a6301dbd588c327a49fe597"
+    },
+    {
+      "path": "src/shared/device-key-proof.ts",
+      "sha256": "7ed724b13d0f52fcbec88938c0d463cf86ae0014ea497eeb7a1769f2dc387d47"
+    },
+    {
+      "path": "src/shared/mobile-e2ee-v2-contract.ts",
+      "sha256": "038fb782cd7eb86de5b7e5709467fbc7d8a1b731d748a45bbbabeef9d700f534"
+    },
+    {
+      "path": "src/shared/mobile-e2ee-v2-framing.ts",
+      "sha256": "beb92fc095407db37399b9058833474687814a53e954f24e44a480d65df99913"
+    },
+    {
+      "path": "src/shared/mobile-relay-credential-contract.ts",
+      "sha256": "5a8f1a6b65948f0a9846b9e956c77d7ab374d528744da66eaa0af070a7ab188b"
+    },
+    {
+      "path": "src/shared/paired-e2ee-client-handshake.ts",
+      "sha256": "3d7a233aa1ac1ad2a82da0a271ceeeb31ed19907939d2eee4087eadf0a122cc9"
+    },
+    {
+      "path": "src/shared/paired-e2ee-primitives.ts",
+      "sha256": "874639723f91e1d04ed2fd86404f6d38db6b8b4fbc0f79e8ea6ab7d53ed70fd6"
+    },
+    {
+      "path": "src/shared/paired-e2ee-v2-client-session.ts",
+      "sha256": "1584074bc7ca05073e7bf79ef05c8a57e228a5bc15c7ad875c0c02c5131ca9f6"
+    },
+    {
+      "path": "src/shared/paired-e2ee-v2-key-schedule.ts",
+      "sha256": "3193a237c9fd2400b8fdc60ed9053381cdd982d6720073beedec257777f273f5"
+    },
+    {
+      "path": "src/shared/ws-inbound-message-queue.ts",
+      "sha256": "fc840bcd07e7dc9b3c5707ac8835f6f7e0cb3a4e779e53ba32d8db5657207e24"
+    },
+    {
+      "path": "src/shared/ws-outbound-backpressure-queue.ts",
+      "sha256": "9cccc7c812a3b60c61fcccc797d772da2c4c775b0f9052c4b0c4f2a1b0541a37"
+    },
+    {
+      "path": "src/shared/zod-salvage.ts",
+      "sha256": "6d3e229fd5ac1d4bc7ae9d630f0f1af3b2c518a50a8678f0c50d82c2ddcb588d"
+    },
+    {
+      "path": "mobile/src/transport/pairing.ts",
+      "sha256": "874367b21b222af2638b123186592114d3722604fb8c4eb8b15e79b4a2f04b3a"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/LICENSE",
+      "sha256": "bc32465e1384fbea714ddf43e4849aae2e3662ab8a7c8c4a35a1bf41c7b5ad81"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/README.md",
+      "sha256": "30f921372602f874e960bab33900f71e6022cb92daca4329b3646b5f252b51f6"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/android/build.gradle",
+      "sha256": "958e91d5094cfce6ebe15acb9d168c0d8493811588a2048917b65876e4fcb7a8"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/android/src/main/AndroidManifest.xml",
+      "sha256": "21058c692532098e42afc39cf09de946c38229ec414bb7ac32f4fc90ba9a5f45"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/android/src/main/java/expo/modules/twowayaudio/AudioEngine.kt",
+      "sha256": "afa28986df5a679c4b67f80ba9f4d436b8ec2f2bde2d863a153a4a9a69ff7641"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/android/src/main/java/expo/modules/twowayaudio/ExpoTwoWayAudioLifeCycleListener.kt",
+      "sha256": "e2cf2be8bd984e27c045c0691b31d73cb24a8b526e98f2915c1eb843ab82287e"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/android/src/main/java/expo/modules/twowayaudio/ExpoTwoWayAudioModule.kt",
+      "sha256": "b272fc4c15af7f67582f17efee89bdcb4d307c9a3e8929fdba94d320b91414fd"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/android/src/main/java/expo/modules/twowayaudio/ExpoTwoWayAudioPackage.kt",
+      "sha256": "f9673f26ee87f7142e83bdefffba5c6aefc3f006056c8af5e8d964093e890433"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/expo-module.config.json",
+      "sha256": "54a53fe76500230d21fb38139938b8bf76430b8b1772f3154808c79a3b9e4867"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/ios/AudioEngine.swift",
+      "sha256": "bbaf27fa0c59c5126ad2d58c978bacb354f8a3b5d52fb0474b2e121332c7d8f4"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/ios/ExpoTwoWayAudio.podspec",
+      "sha256": "5e659dd03fc464665951a7836712bafe0d72706c4d33d2493184807fb9442a73"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/ios/ExpoTwoWayAudioModule.swift",
+      "sha256": "b2a8bfb2536b5f093b3a937547221cc813cc54625f20d0d4fc7c3b531b6a5917"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/ios/MicrophonePermissionRequester.swift",
+      "sha256": "450f528defa4bb5fa3192bbdcb86a705dccf5d1982747be81c9d3c2a699ff68c"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/ios/RecordingInterruptionIntent.swift",
+      "sha256": "a0006cb6e9827da057400be3a1f60ff72a4d563961cf561fa477e796bc90893b"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/package.json",
+      "sha256": "242e6105eeeb169f2ff79f513f91843f24a8d3fbadb81b0cf18c255610e5b49d"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/src/ExpoTwoWayAudioModule.ts",
+      "sha256": "e824c6a10b6c5ecf22595673f9769861890557991596268c065ade17bd552622"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/src/ExpoTwoWayAudioModule.web.ts",
+      "sha256": "1384fc64df6f73e2db8be7de40bdd666e785cd18c5d95db2e39de77d73dc3081"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/src/core.ts",
+      "sha256": "566d73b449bfdf8b0267ee7a6d0d0538cb45cf2a4ed6904dd06d5b7cfce3fff3"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/src/events.ts",
+      "sha256": "805c1da3fbc7c0c0f6331638f7bd6f48a3a78fd22704ed0d46653d36a3bdf84e"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/src/hooks.ts",
+      "sha256": "651c6533ef091bc0ce629325ffb045fdc5200df062c80650f34c38ec393bae75"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/src/index.ts",
+      "sha256": "7a35dd3207b2ad637374f9db6eb5d9a4f4971e778a7198138fb0087c5d5e64a0"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/tests/RecordingInterruptionIntentTests.swift",
+      "sha256": "91a8afcf1f6b2f94e896e3aa150f6c92890a3f34c1f2c279f9fc81650336a48b"
+    },
+    {
+      "path": "mobile/packages/expo-two-way-audio/tsconfig.json",
+      "sha256": "bb26c4d30afb2b4329be0b6c7fb8f7810765d85d239a5462c0fa69f1b6aec6b6"
+    },
+    {
+      "path": "src/shared/terminal-bracketed-paste-text.ts",
+      "sha256": "069a9dee37ee53df08614281798d5b24a5f0ccd7c41987fdc82761bbc6f5b922"
+    },
+    {
+      "path": "src/shared/sha256.ts",
+      "sha256": "4f5a7ec69361f80c744ef142a0200ddda98b78d8cd0c1ef1ee95ee7210e1c810"
+    }
+  ]
+}
