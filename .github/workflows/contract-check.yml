@@ -12,6 +12,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - name: Check public documentation links and media provenance
+        run: node scripts/check-public-docs.mjs
       - name: Verify pinned upstream source integrity
         run: node scripts/verify-upstream.mjs
       - name: Test the vendoring and verification tools (temporary git repository)
@@ -19,6 +21,10 @@ jobs:
       - name: Install mobile dependencies
         working-directory: apps/mobile
         run: npm ci --no-audit --no-fund --ignore-scripts
+      - name: Build isolated documentation source previews
+        run: |
+          npm --prefix scripts/showcase ci --ignore-scripts --no-audit --no-fund
+          node scripts/showcase/generate.mjs --out "$RUNNER_TEMP/orca-commander-preview"
       - name: Compile and run domain policy checks
         working-directory: apps/mobile
         run: npm run test:domain

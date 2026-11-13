@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="740" viewBox="0 0 1200 740" role="img" aria-labelledby="title desc">
+<title id="title">Orca Commander architecture</title><desc id="desc">The mobile interface reads and responds through a paired encrypted connection to the authoritative Orca desktop. Pairing custody and recovery journals stay on the device. Provider execution and speech selection belong to the host.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto-start-reverse"><path d="M0 0L8 4L0 8" fill="none" stroke="#56745a" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="740" rx="20" fill="#f2f1e8"/>
+<g font-family="system-ui,sans-serif" fill="#1b3022">
+<text x="48" y="48" font-family="monospace" font-size="12" letter-spacing="1.4" fill="#5e7862">ORCA COMMANDER / SOURCE ARCHITECTURE</text>
+<text x="48" y="99" font-size="34" font-weight="650" letter-spacing="-1">A human surface, an authoritative host.</text>
+<text x="48" y="132" font-size="16" fill="#5f7164">The phone renders context and prepares responses. Orca owns sessions, capabilities and execution.</text>
+<rect x="48" y="173" width="402" height="331" rx="16" fill="#e2e8da" stroke="#a9b99f"/>
+<rect x="650" y="173" width="502" height="331" rx="16" fill="#dce8df" stroke="#a1b7a5"/>
+<text x="70" y="210" font-size="17" font-weight="700">PHONE / TABLET</text>
+<text x="672" y="210" font-size="17" font-weight="700">YOUR ORCA DESKTOP</text>
+<g fill="#fffef8" stroke="#b8c5b0">
+<rect x="70" y="230" width="358" height="68" rx="10"/><rect x="70" y="314" width="358" height="68" rx="10"/><rect x="70" y="398" width="358" height="80" rx="10"/>
+<rect x="672" y="230" width="458" height="68" rx="10"/><rect x="672" y="314" width="458" height="68" rx="10"/><rect x="672" y="398" width="458" height="80" rx="10"/>
+</g>
+<text x="88" y="256" font-size="17" font-weight="650">Controller + full-content sheets</text><text x="88" y="280" font-size="14" fill="#5f7164">Selection · state · editable drafts · review</text>
+<text x="88" y="340" font-size="17" font-weight="650">Read model + guarded clients</text><text x="88" y="364" font-size="14" fill="#5f7164">Freshness · identity · capabilities · uncertainty</text>
+<text x="88" y="425" font-size="17" font-weight="650">Pinned paired transport contracts</text><text x="88" y="450" font-size="14" fill="#5f7164">Selected upstream schemas and E2EE code</text>
+<text x="690" y="256" font-size="17" font-weight="650">Paired mobile RPC boundary</text><text x="690" y="280" font-size="14" fill="#5f7164">Current host contract decides availability</text>
+<text x="690" y="340" font-size="17" font-weight="650">Authoritative runtime state</text><text x="690" y="364" font-size="14" fill="#5f7164">Projects · worktrees · tabs · native requests</text>
+<text x="690" y="425" font-size="17" font-weight="650">Provider adapters + agent sessions</text><text x="690" y="450" font-size="14" fill="#5f7164">Codex / Claude paths remain contract-specific</text>
+<path d="M466 348H632" fill="none" stroke="#56745a" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="550" y="297" text-anchor="middle" font-size="14" font-weight="650">Direct paired</text><text x="550" y="318" text-anchor="middle" font-size="14" font-weight="650">E2EE</text><text x="550" y="383" text-anchor="middle" font-size="12" fill="#5f7164">reads + bounded</text><text x="550" y="402" text-anchor="middle" font-size="12" fill="#5f7164">confirmed writes</text>
+<path d="M248 504V532M902 504V532" stroke="#56745a" stroke-width="1.5"/>
+<rect x="48" y="532" width="402" height="117" rx="12" fill="#253c2d"/>
+<rect x="650" y="532" width="502" height="117" rx="12" fill="#253c2d"/>
+<text x="70" y="565" font-size="17" font-weight="650" fill="#e7efdc">Device custody + recovery journals</text><text x="70" y="592" font-size="14" fill="#c3d1bd">Protected pairing material; bounded result fences.</text><text x="70" y="616" font-size="14" fill="#c3d1bd">Journals exclude prompt/audio bodies and keys.</text>
+<text x="672" y="565" font-size="17" font-weight="650" fill="#e7efdc">Host-selected execution + speech</text><text x="672" y="592" font-size="14" fill="#c3d1bd">Provider credentials and local/cloud model selection stay here.</text><text x="672" y="616" font-size="14" fill="#c3d1bd">Voice produces an editable draft, never approval authority.</text>
+<text x="48" y="695" font-size="12" fill="#657567">Source alpha. This diagram describes boundaries; it does not certify device, network, voice or release acceptance.</text>
+</g></svg>

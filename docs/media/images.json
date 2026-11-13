@@ -1,0 +1,86 @@
+[
+  {
+    "file": "controller.png",
+    "bytes": 944135,
+    "sha256": "8bfc128be989a26aece68ea42bc0f9d8d42d7b7ec649c6783b5cf909ed452220",
+    "width": 780,
+    "height": 1920
+  },
+  {
+    "file": "controller-ko.png",
+    "bytes": 936749,
+    "sha256": "d87e84cd448c4ce1d66fbc2eee5a4546933caec38540ca81d5d54004cd14371d",
+    "width": 780,
+    "height": 1920
+  },
+  {
+    "file": "agents.png",
+    "bytes": 847292,
+    "sha256": "967a5d53f06a9bbcbe5701438f00b9561eab888f84d3f44608be58c5339680c7",
+    "width": 780,
+    "height": 1920
+  },
+  {
+    "file": "content.png",
+    "bytes": 750866,
+    "sha256": "2d5bb97ac4e6c1d3370a907e1ca09fd1c6f9870000f2bb82187b8132a02df15a",
+    "width": 780,
+    "height": 1920
+  },
+  {
+    "file": "status.png",
+    "bytes": 692586,
+    "sha256": "2ffbca9863e5e60b29c1f146417ea503418eec309b4c8b2b3cb97853f02a4e24",
+    "width": 780,
+    "height": 1920
+  },
+  {
+    "file": "voice.png",
+    "bytes": 938472,
+    "sha256": "3ace5821b38e8e445d8c6f0ffe808655624edb4fdc22158077386c6e56068848",
+    "width": 780,
+    "height": 1920
+  },
+  {
+    "file": "tablet.png",
+    "bytes": 2232701,
+    "sha256": "48c4e3ad3ecd8325b6b68234824ae30b39e6cd1230b18887c1055304b609781f",
+    "width": 1642,
+    "height": 2400
+  },
+  {
+    "file": "hero.png",
+    "bytes": 1645662,
+    "sha256": "b42704bb48beaab5e69c59e32ef56fa8216f0617e52b6e6ac3510e4a2f9f131e",
+    "width": 2560,
+    "height": 1520
+  },
+  {
+    "file": "anatomy.png",
+    "bytes": 1363272,
+    "sha256": "b1fa27ca43385e9a1a71f738726bce3e020c3481eea13770d0746f9bcd81dffe",
+    "width": 2560,
+    "height": 2240
+  },
+  {
+    "file": "social.jpg",
+    "bytes": 258447,
+    "sha256": "ec7446ff920aa222b6c359246920468ff255c71388e5bed8259a84cf245b0be4",
+    "width": 2560,
+    "height": 1280
+  },
+  {
+    "file": "architecture.svg",
+    "bytes": 4609,
+    "sha256": "dff30f52fedd06162917ce287f305cad10e357dc12211319adc0625348e42023",
+    "width": 1200,
+    "height": 740
+  },
+  {
+    "file": "write-flow.svg",
+    "bytes": 4149,
+    "sha256": "9b5accdbc25a6890c51bcb0611102e85464f1ef9163ac91fd3fa7cf92c2b8278",
+    "width": 1200,
+    "height": 620
+  }
+]

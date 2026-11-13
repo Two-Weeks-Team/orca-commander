@@ -1,0 +1,25 @@
+name: Design or interaction proposal
+description: Improve a concrete screen, control or user flow
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic or redacted examples. A mockup is a proposal, not implemented behavior or device evidence."
+  - type: textarea
+    id: moment
+    attributes:
+      label: What is the user trying to do?
+      description: Describe the moment, current screen/state and what gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed interaction or design
+      description: Explain how it changes reading, navigation, drafting or confirmation. Link a source location or clearly labeled mockup if useful.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence, references and remaining questions
+      description: Link original sources; distinguish a tested result from inspiration. Mention large text, accessibility and uncertainty where relevant.

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Setup and troubleshooting
+    url: https://github.com/Two-Weeks-Team/orca-commander/blob/main/docs/GETTING_STARTED.md
+    about: Read build requirements, first-connection guidance and known limitations.
+  - name: Report a security vulnerability privately
+    url: https://github.com/Two-Weeks-Team/orca-commander/security/advisories/new
+    about: Keep pairing data, credentials and sensitive details out of public issues.

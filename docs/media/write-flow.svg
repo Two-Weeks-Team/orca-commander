@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">Guarded response lifecycle</title><desc id="desc">Select a target, read context, prepare an exact response, review and hold to confirm, then revalidate, reserve the recovery journal and send once. Accepted is distinct from completed. Unknown outcomes retain a fence and are not automatically retried.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#627963" stroke-width="1.5"/></marker></defs>
+<rect width="1200" height="620" rx="20" fill="#f2f1e8"/>
+<g font-family="system-ui,sans-serif" fill="#1b3022">
+<text x="40" y="46" font-family="monospace" font-size="12" letter-spacing="1.4" fill="#5e7862">ORCA COMMANDER / RESPONSE LIFECYCLE</text>
+<text x="40" y="96" font-size="34" font-weight="650" letter-spacing="-1">Review is a step. Sending is a boundary.</text>
+<text x="40" y="130" font-size="16" fill="#5f7164">A key press prepares intent; it does not turn a stale target or spoken phrase into authority.</text>
+<g fill="#fffef8" stroke="#afbea5"><rect x="40" y="177" width="200" height="151" rx="12"/><rect x="270" y="177" width="200" height="151" rx="12"/><rect x="500" y="177" width="200" height="151" rx="12"/><rect x="730" y="177" width="200" height="151" rx="12"/><rect x="960" y="177" width="200" height="151" rx="12"/></g>
+<g font-family="monospace" font-size="13" fill="#63805b"><text x="59" y="206">01 / FOCUS</text><text x="289" y="206">02 / READ</text><text x="519" y="206">03 / PREPARE</text><text x="749" y="206">04 / REVIEW</text><text x="979" y="206">05 / DISPATCH</text></g>
+<g font-size="19" font-weight="650"><text x="59" y="244">Select the session</text><text x="289" y="244">Inspect context</text><text x="519" y="244">Exact target + body</text><text x="749" y="244">Read, then hold</text><text x="979" y="244">Revalidate + send</text></g>
+<g font-size="14" fill="#5f7164"><text x="59" y="276">Identity, not just a title.</text><text x="59" y="299">No action from a label.</text><text x="289" y="276">Fresh state and capability.</text><text x="289" y="299">Unknown stays unknown.</text><text x="519" y="276">Preparing sends nothing.</text><text x="519" y="299">Voice stays an edit.</text><text x="749" y="276">Full identity and content.</text><text x="749" y="299">Explicit human gesture.</text><text x="979" y="276">Reserve journal first.</text><text x="979" y="299">One attempt, no replay.</text></g>
+<path d="M244 254H263M474 254H493M704 254H723M934 254H953" fill="none" stroke="#627963" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M1060 329V367H831V397M1060 367V397" fill="none" stroke="#627963" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="40" y="398" width="630" height="125" rx="12" fill="#e3e8da" stroke="#b4c1a8"/>
+<text x="60" y="431" font-size="18" font-weight="650">Changed, expired, disconnected or storage unavailable?</text><text x="60" y="460" font-size="16" fill="#526b56">Refuse the write. Refresh and prepare a new confirmation.</text><text x="60" y="490" font-size="14" fill="#526b56">A visible old context cannot bypass current identity or uncertainty fences.</text>
+<rect x="700" y="398" width="232" height="125" rx="12" fill="#253c2d"/>
+<text x="718" y="432" font-size="19" font-weight="650" fill="#d7efbb">Host accepted</text><text x="718" y="461" font-size="14" fill="#d0ddc8">Acceptance is recorded.</text><text x="718" y="489" font-size="14" fill="#d0ddc8">It is not task completion.</text>
+<rect x="960" y="398" width="200" height="125" rx="12" fill="#efe0bd" stroke="#c2aa74"/>
+<text x="978" y="432" font-size="19" font-weight="650">Outcome unknown</text><text x="978" y="461" font-size="14" fill="#685c3f">Keep the fence; inspect host.</text><text x="978" y="489" font-size="14" fill="#685c3f">Never auto-retry the send.</text>
+<text x="40" y="574" font-size="12" fill="#657567">Conceptual flow of implemented source guards. Host fences are not atomic compare-and-swap; recovery/device acceptance remains bounded.</text>
+</g></svg>

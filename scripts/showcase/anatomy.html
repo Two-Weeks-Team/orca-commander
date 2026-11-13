@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Orca Commander — controller anatomy</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f1e8;color:#1a2b22;font-family:system-ui,sans-serif}.board{width:1280px;height:1120px;position:relative;overflow:hidden}.head{position:absolute;left:64px;top:46px}.eyebrow{font:13px ui-monospace,monospace;letter-spacing:.08em;color:#5c765e}h1{font-size:42px;letter-spacing:-1.4px;margin:14px 0}.intro{font-size:17px;color:#5d7064}.frame{position:absolute;left:64px;top:184px;width:390px;height:844px;overflow:hidden;border-radius:20px;border:1px solid #5a6b5d;box-shadow:0 14px 30px #24392e22}.frame iframe{border:0;width:390px;height:844px}.notes{position:absolute;left:590px;top:202px;width:610px}.note{display:flex;gap:18px;margin-bottom:33px;min-height:104px}.letter{background:#253e2d;color:#e2f0c9;display:flex;align-items:center;justify-content:center;width:39px;height:39px;border-radius:50%;font:20px ui-monospace,monospace;flex-shrink:0}.note h2{margin:0 0 8px;font-size:23px;letter-spacing:-.5px}.note p{margin:0;color:#52695b;line-height:1.65;font-size:16px;max-width:500px}.mark{position:absolute;background:#d9edaa;color:#17291c;border:2px solid #456143;border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;font:18px ui-monospace,monospace;box-shadow:0 2px 6px #0004}.foot{position:absolute;left:64px;bottom:32px;font:11px/1.7 ui-monospace,monospace;color:#617064}
+</style>
+<section class="board">
+ <header class="head"><div class="eyebrow">ORCA COMMANDER / INTERACTION DESIGN</div><h1>One selected session. Deliberate controls.</h1><p class="intro">The rendered plate gives each action a place; the host still owns state and authority.</p></header>
+ <div class="frame"><iframe title="Actual controller components with synthetic data" src="controller.html?raw"></iframe></div>
+ <div class="mark" style="left:438px;top:300px">A</div><div class="mark" style="left:438px;top:510px">B</div><div class="mark" style="left:438px;top:756px">C</div>
+ <div class="mark" style="left:108px;top:1008px">D</div><div class="mark" style="left:242px;top:1008px">E</div><div class="mark" style="left:368px;top:1008px">F</div>
+ <div class="notes">
+  <div class="note"><span class="letter">A</span><div><h2>Keep the target in view</h2><p>Project, worktree, session, state, read age and usage share the display. A retained view is visibly distinct from fresh authority.</p></div></div>
+  <div class="note"><span class="letter">B</span><div><h2>Tap a session key</h2><p>Number, title, provider and state stay together. Color and symbols help you find work without reading every row.</p></div></div>
+  <div class="note"><span class="letter">C</span><div><h2>Choose an explicit command</h2><p>Open full content, prepare input, review a reusable phrase or open the list. Unsupported responses stay disabled.</p></div></div>
+  <div class="note"><span class="letter">D</span><div><h2>Navigate by touch</h2><p>The stick and whole-surface swipes move through the supported tab/project order. The stick center opens content.</p></div></div>
+  <div class="note"><span class="letter">E</span><div><h2>Hold to make a voice draft</h2><p>Release to finish capture. Transcribed words remain editable; speaking never grants approval or sends automatically.</p></div></div>
+  <div class="note"><span class="letter">F</span><div><h2>Find what needs attention</h2><p>The dial moves between attention items. In the content sheet, a separate dial scrolls the reader rather than changing the target.</p></div></div>
+ </div>
+ <footer class="foot">SOURCE UI PREVIEW WITH SYNTHETIC DATA · REACT NATIVE WEB, NOT A NATIVE CAPTURE<br>Touch/accessibility and platform acceptance remain subject to SUPPORT.md.</footer>
+</section></html>
